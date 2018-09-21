@@ -1,12 +1,12 @@
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import blue from "@material-ui/core/colors/blue";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import * as React from "react";
 
 import CardTitle from "../../../components/CardTitle";
+import ExternalLink from "../../../components/ExternalLink";
 import Skeleton from "../../../components/Skeleton";
 import i18n from "../../../i18n";
 
@@ -19,25 +19,20 @@ interface AddressType {
   firstName: string;
   id: string;
   lastName: string;
-  phone: {
-    prefix: string;
-    number: string;
-  };
+  phone: string;
   postalCode: string;
-  streetAddress_1: string;
-  streetAddress_2: string;
+  streetAddress1: string;
+  streetAddress2: string;
 }
 interface OrderCustomerProps {
   client?: {
     id: string;
     email: string;
-    name: string;
   };
   shippingAddress?: AddressType;
   billingAddress?: AddressType;
-  editCustomer?: boolean;
+  canEditCustomer?: boolean;
   onCustomerEditClick?();
-  onCustomerEmailClick?(id: string);
   onBillingAddressEdit?();
   onShippingAddressEdit?();
 }
@@ -51,11 +46,6 @@ const decorate = withStyles(
       height: 1,
       width: "100%"
     },
-    link: {
-      color: blue[500],
-      cursor: "pointer",
-      textDecoration: "none"
-    }
   }),
   { name: "OrderCustomer" }
 );
@@ -64,10 +54,9 @@ const OrderCustomer = decorate<OrderCustomerProps>(
     classes,
     client,
     billingAddress,
-    editCustomer,
+    canEditCustomer,
     shippingAddress,
     onCustomerEditClick,
-    onCustomerEmailClick,
     onBillingAddressEdit,
     onShippingAddressEdit
   }) => (
@@ -75,7 +64,7 @@ const OrderCustomer = decorate<OrderCustomerProps>(
       <CardTitle
         title={i18n.t("Customer")}
         toolbar={
-          !!editCustomer && (
+          !!canEditCustomer && (
             <Button
               color="secondary"
               variant="flat"
@@ -88,25 +77,17 @@ const OrderCustomer = decorate<OrderCustomerProps>(
         }
       />
       <CardContent>
-        {client === undefined || client === null ? (
+        {client === undefined ? (
           <>
             <Skeleton />
             <Skeleton />
           </>
+        ) : client === null ? (
+          <Typography>{i18n.t("Anonymous customer")}</Typography>
         ) : (
-          <>
-            <Typography>{client.name}</Typography>
-            <Typography
-              className={classes.link}
-              onClick={
-                onCustomerEmailClick
-                  ? onCustomerEmailClick(client.id)
-                  : undefined
-              }
-            >
-              {client.email}
-            </Typography>
-          </>
+          <ExternalLink href={`mailto:${client.email}`}>
+            {client.email}
+          </ExternalLink>
         )}
       </CardContent>
       <hr className={classes.hr} />
@@ -114,23 +95,21 @@ const OrderCustomer = decorate<OrderCustomerProps>(
       <CardTitle
         title={i18n.t("Shipping Address")}
         toolbar={
-          !!editCustomer && (
-            <Button
-              color="secondary"
-              variant="flat"
-              onClick={onShippingAddressEdit}
-              disabled={!onShippingAddressEdit && client === undefined}
-            >
-              {i18n.t("Edit")}
-            </Button>
-          )
+          <Button
+            color="secondary"
+            variant="flat"
+            onClick={onShippingAddressEdit}
+            disabled={!onShippingAddressEdit && client === undefined}
+          >
+            {i18n.t("Edit")}
+          </Button>
         }
       />
       <CardContent>
-        {client === undefined || client === null ? (
-          <>
-            <Skeleton />
-          </>
+        {shippingAddress === undefined ? (
+          <Skeleton />
+        ) : shippingAddress === null ? (
+          <Typography>{i18n.t("Not set")}</Typography>
         ) : (
           <>
             {shippingAddress.companyName && (
@@ -140,9 +119,9 @@ const OrderCustomer = decorate<OrderCustomerProps>(
               {shippingAddress.firstName} {shippingAddress.lastName}
             </Typography>
             <Typography>
-              {shippingAddress.streetAddress_1}
+              {shippingAddress.streetAddress1}
               <br />
-              {shippingAddress.streetAddress_2}
+              {shippingAddress.streetAddress2}
             </Typography>
             <Typography>
               {shippingAddress.postalCode} {shippingAddress.city}
@@ -161,23 +140,21 @@ const OrderCustomer = decorate<OrderCustomerProps>(
       <CardTitle
         title={i18n.t("Billing Address")}
         toolbar={
-          !!editCustomer && (
-            <Button
-              color="secondary"
-              variant="flat"
-              onClick={onBillingAddressEdit}
-              disabled={!onBillingAddressEdit && client === undefined}
-            >
-              {i18n.t("Edit")}
-            </Button>
-          )
+          <Button
+            color="secondary"
+            variant="flat"
+            onClick={onBillingAddressEdit}
+            disabled={!onBillingAddressEdit && client === undefined}
+          >
+            {i18n.t("Edit")}
+          </Button>
         }
       />
       <CardContent>
-        {client === undefined || client === null ? (
-          <>
-            <Skeleton />
-          </>
+        {billingAddress === undefined ? (
+          <Skeleton />
+        ) : billingAddress === null ? (
+          <Typography>{i18n.t("Not set")}</Typography>
         ) : shippingAddress.id === billingAddress.id ? (
           <Typography>{i18n.t("Same as shipping address")}</Typography>
         ) : (
@@ -189,9 +166,9 @@ const OrderCustomer = decorate<OrderCustomerProps>(
               {billingAddress.firstName} {billingAddress.lastName}
             </Typography>
             <Typography>
-              {billingAddress.streetAddress_1}
+              {billingAddress.streetAddress1}
               <br />
-              {billingAddress.streetAddress_2}
+              {billingAddress.streetAddress2}
             </Typography>
             <Typography>
               {billingAddress.postalCode} {billingAddress.city}

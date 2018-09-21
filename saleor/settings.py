@@ -110,7 +110,7 @@ ENABLE_SSL = get_bool_from_env('ENABLE_SSL', False)
 if ENABLE_SSL:
     SECURE_SSL_REDIRECT = not DEBUG
 
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 ORDER_FROM_EMAIL = os.getenv('ORDER_FROM_EMAIL', DEFAULT_FROM_EMAIL)
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
@@ -320,7 +320,9 @@ OPENEXCHANGERATES_API_KEY = os.environ.get('OPENEXCHANGERATES_API_KEY')
 
 # VAT configuration
 # Enabling vat requires valid vatlayer access key.
+# If you are subscribed to a paid vatlayer plan, you can enable HTTPS.
 VATLAYER_ACCESS_KEY = os.environ.get('VATLAYER_ACCESS_KEY')
+VATLAYER_USE_HTTPS = get_bool_from_env('VATLAYER_USE_HTTPS', False)
 
 ACCOUNT_ACTIVATION_DAYS = 3
 

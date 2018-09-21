@@ -3,6 +3,7 @@ from operator import attrgetter
 from uuid import uuid4
 
 from django.conf import settings
+from django.contrib.postgres.fields import JSONField
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.db.models import F, Max, Sum
@@ -16,10 +17,10 @@ from payments import PaymentStatus, PurchasedItem
 from payments.models import BasePayment
 from prices import Money, TaxedMoney
 
-from . import FulfillmentStatus, OrderStatus
+from . import FulfillmentStatus, OrderEvents, OrderStatus, display_order_event
 from ..account.models import Address
-from ..core.models import BaseNote
 from ..core.utils import build_absolute_uri
+from ..core.utils.json_serializer import CustomJsonEncoder
 from ..core.utils.taxes import ZERO_TAXED_MONEY
 from ..core.weight import WeightUnits, zero_weight
 from ..discount.models import Voucher
@@ -183,6 +184,13 @@ class Order(models.Model):
     def can_cancel(self):
         return self.status not in {OrderStatus.CANCELED, OrderStatus.DRAFT}
 
+    def get_total_weight(self):
+        # Cannot use `sum` as it parses an empty Weight to an int
+        weights = Weight(kg=0)
+        for line in self:
+            weights += line.variant.get_weight() * line.quantity
+        return weights
+
 
 class OrderLine(models.Model):
     order = models.ForeignKey(
@@ -192,7 +200,8 @@ class OrderLine(models.Model):
         blank=True, null=True)
     # max_length is as produced by ProductVariant's display_product method
     product_name = models.CharField(max_length=386)
-    translated_product_name = models.CharField(max_length=386, default='')
+    translated_product_name = models.CharField(
+        max_length=386, default='', blank=True)
     product_sku = models.CharField(max_length=32)
     is_shipping_required = models.BooleanField()
     quantity = models.IntegerField(
@@ -314,23 +323,30 @@ class Payment(BasePayment):
         return Money(self.captured_amount, self.currency)
 
 
-class OrderHistoryEntry(models.Model):
+class OrderEvent(models.Model):
+    """Model used to store events that happened during the order lifecycle.
+
+        Args:
+            parameters: Values needed to display the event on the storefront
+            type: Type of an order
+    """
     date = models.DateTimeField(default=now, editable=False)
+    type = models.CharField(
+        max_length=255,
+        choices=((event.name, event.value) for event in OrderEvents))
     order = models.ForeignKey(
-        Order, related_name='history', on_delete=models.CASCADE)
-    content = models.TextField()
+        Order, related_name='events', on_delete=models.CASCADE)
+    parameters = JSONField(
+        blank=True, default=dict, encoder=CustomJsonEncoder)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL, blank=True, null=True,
-        on_delete=models.SET_NULL)
+        on_delete=models.SET_NULL, related_name='+')
 
     class Meta:
         ordering = ('date', )
 
+    def __repr__(self):
+        return 'OrderEvent(type=%r, user=%r)' % (self.type, self.user)
 
-class OrderNote(BaseNote):
-    order = models.ForeignKey(
-        Order, related_name='notes', on_delete=models.CASCADE)
-    is_public = None
-
-    class Meta:
-        ordering = ('date', )
+    def get_event_display(self):
+        return display_order_event(self)

@@ -30,6 +30,7 @@ import i18n from "./i18n";
 import ArrowDropdown from "./icons/ArrowDropdown";
 import Home from "./icons/Home";
 import Shop from "./icons/Shop";
+import Truck from "./icons/Truck";
 import { removeDoubleSlashes } from "./misc";
 import { productListUrl } from "./products";
 
@@ -61,6 +62,12 @@ const menuStructure = [
     ],
     icon: <Shop />,
     label: i18n.t("Catalogue", { context: "Menu label" })
+  },
+  {
+    ariaLabel: "orders",
+    icon: <Truck />,
+    label: i18n.t("Orders", { context: "Menu label" }),
+    url: "/orders/"
   }
 ];
 

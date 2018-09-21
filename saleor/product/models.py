@@ -119,7 +119,7 @@ class Product(SeoModel):
         decimal_places=settings.DEFAULT_DECIMAL_PLACES)
     available_on = models.DateField(blank=True, null=True)
     is_published = models.BooleanField(default=True)
-    attributes = HStoreField(default={}, blank=True)
+    attributes = HStoreField(default=dict, blank=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     charge_taxes = models.BooleanField(default=True)
     tax_rate = models.CharField(
@@ -211,7 +211,7 @@ class ProductVariant(models.Model):
         decimal_places=settings.DEFAULT_DECIMAL_PLACES, blank=True, null=True)
     product = models.ForeignKey(
         Product, related_name='variants', on_delete=models.CASCADE)
-    attributes = HStoreField(default={}, blank=True)
+    attributes = HStoreField(default=dict, blank=True)
     images = models.ManyToManyField('ProductImage', through='VariantImage')
     track_inventory = models.BooleanField(default=True)
     quantity = models.IntegerField(
@@ -357,6 +357,7 @@ class ProductAttributeTranslation(models.Model):
 
 class AttributeChoiceValue(SortableModel):
     name = models.CharField(max_length=100)
+    value = models.CharField(max_length=100, default='')
     slug = models.SlugField(max_length=100)
     attribute = models.ForeignKey(
         ProductAttribute, related_name='values', on_delete=models.CASCADE)

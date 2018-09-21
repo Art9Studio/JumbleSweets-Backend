@@ -21,8 +21,10 @@ import { MessageManager } from "./components/messages";
 import { ConfigurationSection } from "./configuration";
 import HomePage from "./home";
 import "./i18n";
+import OrdersSection from "./orders";
 import PageSection from "./pages";
 import ProductSection from "./products";
+import ProductTypesSection from "./productTypes";
 import theme from "./theme";
 
 const cookies = new Cookies();
@@ -82,7 +84,12 @@ render(
                         <Route exact path="/" component={HomePage} />
                         <Route path="/categories" component={CategorySection} />
                         <Route path="/pages" component={PageSection} />
+                        <Route path="/orders" component={OrdersSection} />
                         <Route path="/products" component={ProductSection} />
+                        <Route
+                          path="/productTypes"
+                          component={ProductTypesSection}
+                        />
                         <Route
                           exact
                           path="/configuration"
