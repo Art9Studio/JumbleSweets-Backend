@@ -146,7 +146,7 @@ class ProductVariant(CountableDjangoObjectType):
             self.price_override
             if self.price_override is not None else self.product.price)
 
-    @permission_required('product.manage_products')
+    # @permission_required('product.manage_products')
     def resolve_price_override(self, info):
         return self.price_override
 
