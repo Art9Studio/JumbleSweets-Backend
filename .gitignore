@@ -5,6 +5,8 @@
 !.codeclimate.yml
 !.coveragerc
 !.dockerignore
+!.editorconfig
+!.envs
 !.eslintrc.json
 !.flowconfig
 !.gqlconfig
@@ -33,3 +35,4 @@ dist/
 webpack-bundle.json
 /templates/templated_email/compiled/*
 !/templates/templated_email/compiled/.gitkeep
+/.envs/.production/

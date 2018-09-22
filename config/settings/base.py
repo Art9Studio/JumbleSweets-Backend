@@ -1,6 +1,8 @@
 import ast
 import os.path
 
+import environ
+
 import dj_database_url
 import dj_email_url
 import django_cache_url
@@ -8,7 +10,9 @@ from django.contrib.messages import constants as messages
 from django.utils.translation import gettext_lazy as _, pgettext_lazy
 from django_prices.templatetags.prices_i18n import get_currency_fraction
 
-from . import __version__
+from dotenv import load_dotenv
+
+from saleor import __version__
 
 
 def get_list(text):
@@ -26,11 +30,15 @@ def get_bool_from_env(name, default_value):
     return default_value
 
 
-DEBUG = get_bool_from_env('DEBUG', True)
+PROJECT_ROOT = environ.Path(__file__) - 3  # (jumblesweets/config/settings/base.py - 3 = jumblesweets/)
+ROOT_DIR = PROJECT_ROOT
+
+load_dotenv(str(ROOT_DIR.path('.env')))
 
 SITE_ID = 1
+DEBUG = get_bool_from_env('DEBUG', True)
 
-PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
+APPS_DIR = ROOT_DIR.path('saleor')
 
 ROOT_URLCONF = 'saleor.urls'
 
@@ -49,14 +57,9 @@ if REDIS_URL:
     CACHE_URL = os.environ.setdefault('CACHE_URL', REDIS_URL)
 CACHES = {'default': django_cache_url.config()}
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://saleor:saleor@localhost:5432/saleor',
-        conn_max_age=600)}
 
-
-TIME_ZONE = 'America/Chicago'
-LANGUAGE_CODE = 'en'
+TIME_ZONE = 'Europe/Moscow'
+LANGUAGE_CODE = 'ru'
 LANGUAGES = [
     ('bg', _('Bulgarian')),
     ('cs', _('Czech')),
@@ -105,11 +108,6 @@ EMAIL_BACKEND = email_config['EMAIL_BACKEND']
 EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
 EMAIL_USE_SSL = email_config['EMAIL_USE_SSL']
 
-ENABLE_SSL = get_bool_from_env('ENABLE_SSL', False)
-
-if ENABLE_SSL:
-    SECURE_SSL_REDIRECT = not DEBUG
-
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 ORDER_FROM_EMAIL = os.getenv('ORDER_FROM_EMAIL', DEFAULT_FROM_EMAIL)
 
@@ -143,25 +141,6 @@ context_processors = [
     'social_django.context_processors.backends',
     'social_django.context_processors.login_redirect']
 
-loaders = [
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader']
-
-if not DEBUG:
-    loaders = [('django.template.loaders.cached.Loader', loaders)]
-
-TEMPLATES = [{
-    'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(PROJECT_ROOT, 'templates')],
-    'OPTIONS': {
-        'debug': DEBUG,
-        'context_processors': context_processors,
-        'loaders': loaders,
-        'string_if_invalid': '<< MISSING VARIABLE "%s" >>' if DEBUG else ''}}]
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = os.environ.get('SECRET_KEY')
-
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -182,11 +161,10 @@ MIDDLEWARE = [
     'saleor.graphql.middleware.jwt_middleware'
 ]
 
-INSTALLED_APPS = [
-    # External apps that need to go before django's
-    'storages',
+THIRD_PARTY_APPS_BEFORE_DJANGO = [
+    'storages']
 
-    # Django modules
+DJANGO_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -195,26 +173,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.auth',
     'django.contrib.postgres',
-    'django.forms',
+    'django.forms']
 
-    # Local apps
-    'saleor.account',
-    'saleor.discount',
-    'saleor.product',
-    'saleor.checkout',
-    'saleor.core',
-    'saleor.graphql',
-    'saleor.menu',
-    'saleor.order.OrderAppConfig',
-    'saleor.dashboard',
-    'saleor.seo',
-    'saleor.shipping',
-    'saleor.search',
-    'saleor.site',
-    'saleor.data_feeds',
-    'saleor.page',
-
-    # External apps
+THIRD_PARTY_APPS = [
     'versatileimagefield',
     'django_babel',
     'bootstrap4',
@@ -234,35 +195,25 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'captcha']
 
-if DEBUG:
-    MIDDLEWARE.append(
-        'debug_toolbar.middleware.DebugToolbarMiddleware')
-    INSTALLED_APPS.append('debug_toolbar')
-    DEBUG_TOOLBAR_PANELS = [
-        # adds a request history to the debug toolbar
-        'ddt_request_history.panels.request_history.RequestHistoryPanel',
+LOCAL_APPS = [
+    'saleor.account',
+    'saleor.discount',
+    'saleor.product',
+    'saleor.checkout',
+    'saleor.core',
+    'saleor.graphql',
+    'saleor.menu',
+    'saleor.order.OrderAppConfig',
+    'saleor.dashboard',
+    'saleor.seo',
+    'saleor.shipping',
+    'saleor.search',
+    'saleor.site',
+    'saleor.data_feeds',
+    'saleor.page']
 
-        'debug_toolbar.panels.versions.VersionsPanel',
-        'debug_toolbar.panels.timer.TimerPanel',
-        'debug_toolbar.panels.settings.SettingsPanel',
-        'debug_toolbar.panels.headers.HeadersPanel',
-        'debug_toolbar.panels.request.RequestPanel',
-        'debug_toolbar.panels.sql.SQLPanel',
-        'debug_toolbar.panels.templates.TemplatesPanel',
-        'debug_toolbar.panels.staticfiles.StaticFilesPanel',
-        'debug_toolbar.panels.cache.CachePanel',
-        'debug_toolbar.panels.signals.SignalsPanel',
-        'debug_toolbar.panels.logging.LoggingPanel',
-        'debug_toolbar.panels.redirects.RedirectsPanel',
-        'debug_toolbar.panels.profiling.ProfilingPanel',
-    ]
-    DEBUG_TOOLBAR_CONFIG = {
-        'RESULTS_STORE_SIZE': 100}
-
-ENABLE_SILK = get_bool_from_env('ENABLE_SILK', False)
-if ENABLE_SILK:
-    MIDDLEWARE.insert(0, 'silk.middleware.SilkyMiddleware')
-    INSTALLED_APPS.append('silk')
+# https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
+INSTALLED_APPS = THIRD_PARTY_APPS_BEFORE_DJANGO + DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 LOGGING = {
     'version': 1,
@@ -307,8 +258,8 @@ AUTH_USER_MODEL = 'account.User'
 
 LOGIN_URL = '/account/login/'
 
-DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'US')
-DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'USD')
+DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'UA')
+DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'UAH')
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
 COUNTRIES_OVERRIDE = {
@@ -430,7 +381,6 @@ WEBPACK_LOADER = {
             r'.+\.hot-update\.js',
             r'.+\.map']}}
 
-
 LOGOUT_ON_PASSWORD_CHANGE = False
 
 # SEARCH CONFIGURATION
@@ -492,7 +442,6 @@ IMPERSONATE = {
     'USE_HTTP_REFERER': True,
     'CUSTOM_ALLOW': 'saleor.account.impersonate.can_impersonate'}
 
-
 # Rich-text editor
 ALLOWED_TAGS = [
     'a',
@@ -515,7 +464,6 @@ ALLOWED_ATTRIBUTES = {
     'img': ['src']}
 ALLOWED_STYLES = ['text-align']
 
-
 # Slugs for menus precreated in Django migrations
 DEFAULT_MENUS = {
     'top_menu_name': 'navbar',
@@ -530,7 +478,6 @@ NOCAPTCHA = True
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 
-
 #  Sentry
 SENTRY_DSN = os.environ.get('SENTRY_DSN')
 if SENTRY_DSN:
@@ -538,7 +485,6 @@ if SENTRY_DSN:
     RAVEN_CONFIG = {
         'dsn': SENTRY_DSN,
         'release': __version__}
-
 
 SERIALIZATION_MODULES = {
     'json': 'saleor.core.utils.json_serializer'}

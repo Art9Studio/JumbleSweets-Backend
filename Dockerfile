@@ -8,7 +8,7 @@ RUN \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
-ADD requirements.txt /app/
+ADD requirements/requirements.txt /app/
 RUN pip install --upgrade pip
 RUN pip install -r /app/requirements.txt
 

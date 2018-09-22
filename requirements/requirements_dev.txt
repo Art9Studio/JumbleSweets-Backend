@@ -1,0 +1,4 @@
+-r ./requirements.txt
+
+django-silk==2.0.0
+pip-tools==2.0.2
