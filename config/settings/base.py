@@ -61,32 +61,34 @@ CACHES = {'default': django_cache_url.config()}
 TIME_ZONE = 'Europe/Moscow'
 LANGUAGE_CODE = 'ru'
 LANGUAGES = [
-    ('bg', _('Bulgarian')),
-    ('cs', _('Czech')),
-    ('de', _('German')),
-    ('en', _('English')),
-    ('es', _('Spanish')),
-    ('fa-ir', _('Persian (Iran)')),
-    ('fr', _('French')),
-    ('hu', _('Hungarian')),
-    ('it', _('Italian')),
-    ('ja', _('Japanese')),
-    ('ko', _('Korean')),
-    ('nb', _('Norwegian')),
-    ('nl', _('Dutch')),
-    ('pl', _('Polish')),
-    ('pt-br', _('Portuguese (Brazil)')),
-    ('ro', _('Romanian')),
+    # ('bg', _('Bulgarian')),
+    # ('cs', _('Czech')),
+    # ('de', _('German')),
+    # ('en', _('English')),
+    # ('es', _('Spanish')),
+    # ('fa-ir', _('Persian (Iran)')),
+    # ('fr', _('French')),
+    # ('hu', _('Hungarian')),
+    # ('it', _('Italian')),
+    # ('ja', _('Japanese')),
+    # ('ko', _('Korean')),
+    # ('nb', _('Norwegian')),
+    # ('nl', _('Dutch')),
+    # ('pl', _('Polish')),
+    # ('pt-br', _('Portuguese (Brazil)')),
+    # ('ro', _('Romanian')),
     ('ru', _('Russian')),
-    ('sk', _('Slovak')),
-    ('tr', _('Turkish')),
-    ('uk', _('Ukrainian')),
-    ('vi', _('Vietnamese')),
-    ('zh-hans', _('Chinese')),
-    ('zh-tw', _('Chinese (Taiwan)'))]
+    # ('sk', _('Slovak')),
+    # ('tr', _('Turkish')),
+    # ('uk', _('Ukrainian')),
+    # ('vi', _('Vietnamese')),
+    # ('zh-hans', _('Chinese')),
+    # ('zh-tw', _('Chinese (Taiwan)'))
+    ]
+
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, 'locale')]
-USE_I18N = True
-USE_L10N = True
+USE_I18N = False
+USE_L10N = False
 USE_TZ = True
 
 FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
@@ -263,16 +265,17 @@ DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'UAH')
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
 COUNTRIES_OVERRIDE = {
-    'EU': pgettext_lazy(
-        'Name of political and economical union of european countries',
-        'European Union')}
+    # 'EU': pgettext_lazy(
+    #     'Name of political and economical union of european countries',
+    #     'European Union')
+}
 
 OPENEXCHANGERATES_API_KEY = os.environ.get('OPENEXCHANGERATES_API_KEY')
 
 # VAT configuration
 # Enabling vat requires valid vatlayer access key.
 # If you are subscribed to a paid vatlayer plan, you can enable HTTPS.
-VATLAYER_ACCESS_KEY = os.environ.get('VATLAYER_ACCESS_KEY')
+VATLAYER_ACCESS_KEY = None  # os.environ.get('VATLAYER_ACCESS_KEY')
 VATLAYER_USE_HTTPS = get_bool_from_env('VATLAYER_USE_HTTPS', False)
 
 ACCOUNT_ACTIVATION_DAYS = 3
@@ -386,20 +389,10 @@ LOGOUT_ON_PASSWORD_CHANGE = False
 # SEARCH CONFIGURATION
 DB_SEARCH_ENABLED = True
 
-# support deployment-dependant elastic enviroment variable
-ES_URL = (os.environ.get('ELASTICSEARCH_URL') or
-          os.environ.get('SEARCHBOX_URL') or os.environ.get('BONSAI_URL'))
-
-ENABLE_SEARCH = bool(ES_URL) or DB_SEARCH_ENABLED  # global search disabling
+ENABLE_SEARCH =  DB_SEARCH_ENABLED  # global search disabling
 
 SEARCH_BACKEND = 'saleor.search.backends.postgresql'
 
-if ES_URL:
-    SEARCH_BACKEND = 'saleor.search.backends.elasticsearch'
-    INSTALLED_APPS.append('django_elasticsearch_dsl')
-    ELASTICSEARCH_DSL = {
-        'default': {
-            'hosts': ES_URL}}
 
 AUTHENTICATION_BACKENDS = [
     'saleor.account.backends.facebook.CustomFacebookOAuth2',

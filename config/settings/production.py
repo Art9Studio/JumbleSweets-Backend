@@ -32,3 +32,17 @@ REDIS_URL = os.environ.get('REDIS_URL')
 if REDIS_URL:
     CACHE_URL = os.environ.setdefault('CACHE_URL', REDIS_URL)
 CACHES = {'default': django_cache_url.config()}
+
+# support deployment-dependant elastic enviroment variable
+ES_URL = (os.environ.get('ELASTICSEARCH_URL') or
+          os.environ.get('SEARCHBOX_URL') or os.environ.get('BONSAI_URL'))
+
+ENABLE_SEARCH = bool(ES_URL) or DB_SEARCH_ENABLED  # global search disabling
+
+if ES_URL:
+    SEARCH_BACKEND = 'saleor.search.backends.elasticsearch'
+    INSTALLED_APPS.append('django_elasticsearch_dsl')
+    ELASTICSEARCH_DSL = {
+        'default': {
+            'hosts': ES_URL}}
+
