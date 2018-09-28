@@ -62,7 +62,8 @@ class ProductFilterSet(FilterSet):
             'attributes': ['exact'],
             'name': ['exact', 'icontains'],
             'product_type__name': ['exact'],
-            'is_published': ['exact']}
+            'is_published': ['exact'],
+            'available_on': ['isnull']}
 
     @classmethod
     def filter_for_field(cls, f, field_name, lookup_expr='exact'):
