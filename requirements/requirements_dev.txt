@@ -1,5 +1,16 @@
 -r ./requirements.txt
 
+coverage
+django-extensions
 django-silk==2.0.0
-pip-tools==2.0.2
 django-cors-headers
+isort
+pip-tools
+pycodestyle
+pydocstyle
+pylint
+pylint-celery
+pylint-django
+pylint-plugin-utils
+pytest-cov
+yapf

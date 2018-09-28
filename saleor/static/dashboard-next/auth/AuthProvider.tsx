@@ -12,6 +12,16 @@ import TokenAuthProvider from "./containers/TokenAuth";
 import TokenVerifyProvider from "./containers/TokenVerify";
 
 interface AuthProviderOperationsProps {
+  children:
+    | ((
+        props: {
+          hasToken: boolean;
+          isAuthenticated: boolean;
+          tokenAuthLoading: boolean;
+          tokenVerifyLoading: boolean;
+        }
+      ) => React.ReactElement<any>)
+    | React.ReactNode;
   onError?: () => void;
 }
 const AuthProviderOperations: React.StatelessComponent<
@@ -33,7 +43,16 @@ const AuthProviderOperations: React.StatelessComponent<
 };
 
 interface AuthProviderProps {
-  children: any;
+  children:
+    | ((
+        props: {
+          hasToken: boolean;
+          isAuthenticated: boolean;
+          tokenAuthLoading: boolean;
+          tokenVerifyLoading: boolean;
+        }
+      ) => React.ReactElement<any>)
+    | React.ReactNode;
   tokenAuth: any;
   tokenVerify: any;
 }
@@ -65,10 +84,11 @@ class AuthProvider extends React.Component<
       if (user) {
         setAuthToken(tokenAuth.data.tokenCreate.token, this.state.persistToken);
       }
-    }
-    if (tokenVerify.data && tokenVerify.data.tokenVerify.user) {
-      const user = tokenVerify.data.tokenVerify.user;
-      this.setState({ user });
+    } else {
+      if (tokenVerify.data && tokenVerify.data.tokenVerify.user) {
+        const user = tokenVerify.data.tokenVerify.user;
+        this.setState({ user });
+      }
     }
   }
 
@@ -93,14 +113,21 @@ class AuthProvider extends React.Component<
   };
 
   render() {
-    const { children } = this.props;
+    const { children, tokenAuth, tokenVerify } = this.props;
     const { user } = this.state;
     const isAuthenticated = !!user;
     return (
       <UserContext.Provider
         value={{ user, login: this.login, logout: this.logout }}
       >
-        {children({ isAuthenticated })}
+        {typeof children === "function"
+          ? children({
+              hasToken: !!getAuthToken(),
+              isAuthenticated,
+              tokenAuthLoading: tokenAuth.loading,
+              tokenVerifyLoading: tokenVerify.loading
+            })
+          : children}
       </UserContext.Provider>
     );
   }

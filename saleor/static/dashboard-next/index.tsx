@@ -14,6 +14,7 @@ import * as Cookies from "universal-cookie";
 import AppRoot from "./AppRoot";
 import Auth, { getAuthToken, removeAuthToken } from "./auth";
 import AuthProvider from "./auth/AuthProvider";
+import LoginLoading from "./auth/components/LoginLoading/LoginLoading";
 import CategorySection from "./categories";
 import { DateProvider } from "./components/DateFormatter";
 import { LocaleProvider } from "./components/Locale";
@@ -25,6 +26,7 @@ import OrdersSection from "./orders";
 import PageSection from "./pages";
 import ProductSection from "./products";
 import ProductTypesSection from "./productTypes";
+import StaffSection from "./staff";
 import theme from "./theme";
 
 const cookies = new Cookies();
@@ -77,8 +79,13 @@ render(
             <MessageManager>
               <CssBaseline />
               <AuthProvider>
-                {({ isAuthenticated }) =>
-                  isAuthenticated ? (
+                {({
+                  hasToken,
+                  isAuthenticated,
+                  tokenAuthLoading,
+                  tokenVerifyLoading
+                }) => {
+                  return isAuthenticated ? (
                     <AppRoot>
                       <Switch>
                         <Route exact path="/" component={HomePage} />
@@ -90,6 +97,7 @@ render(
                           path="/productTypes"
                           component={ProductTypesSection}
                         />
+                        <Route path="/staff" component={StaffSection} />
                         <Route
                           exact
                           path="/configuration"
@@ -97,10 +105,12 @@ render(
                         />
                       </Switch>
                     </AppRoot>
+                  ) : hasToken && tokenVerifyLoading ? (
+                    <LoginLoading />
                   ) : (
-                    <Route component={Auth} />
-                  )
-                }
+                    <Auth loading={tokenAuthLoading} />
+                  );
+                }}
               </AuthProvider>
             </MessageManager>
           </LocaleProvider>

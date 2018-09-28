@@ -22,36 +22,26 @@ export interface ProductVariantCreateData_product_images {
   edges: ProductVariantCreateData_product_images_edges[];
 }
 
-export interface ProductVariantCreateData_product_productType_variantAttributes_edges_node_values {
-  __typename: "ProductAttributeValue";
+export interface ProductVariantCreateData_product_productType_variantAttributes_values {
+  __typename: "AttributeValue";
   id: string;
   sortOrder: number;
   name: string | null;
   slug: string | null;
 }
 
-export interface ProductVariantCreateData_product_productType_variantAttributes_edges_node {
-  __typename: "ProductAttribute";
+export interface ProductVariantCreateData_product_productType_variantAttributes {
+  __typename: "Attribute";
   id: string;
   slug: string | null;
   name: string | null;
-  values: (ProductVariantCreateData_product_productType_variantAttributes_edges_node_values | null)[] | null;
-}
-
-export interface ProductVariantCreateData_product_productType_variantAttributes_edges {
-  __typename: "ProductAttributeCountableEdge";
-  node: ProductVariantCreateData_product_productType_variantAttributes_edges_node;
-}
-
-export interface ProductVariantCreateData_product_productType_variantAttributes {
-  __typename: "ProductAttributeCountableConnection";
-  edges: ProductVariantCreateData_product_productType_variantAttributes_edges[];
+  values: (ProductVariantCreateData_product_productType_variantAttributes_values | null)[] | null;
 }
 
 export interface ProductVariantCreateData_product_productType {
   __typename: "ProductType";
   id: string;
-  variantAttributes: ProductVariantCreateData_product_productType_variantAttributes | null;
+  variantAttributes: (ProductVariantCreateData_product_productType_variantAttributes | null)[] | null;
 }
 
 export interface ProductVariantCreateData_product_variants_edges_node_image_edges_node {

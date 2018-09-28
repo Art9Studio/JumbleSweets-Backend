@@ -32,6 +32,7 @@ function loadStories() {
 
   // Authentication
   require("./stories/auth/LoginPage");
+  require("./stories/auth/LoginLoading");
 
   // Categories
   require("./stories/categories/CategoryDeleteDialog");
@@ -50,6 +51,10 @@ function loadStories() {
   require("./stories/customers/CustomerDetailsPage");
   require("./stories/customers/CustomerEditPage");
   require("./stories/customers/CustomerListPage");
+
+  // Staff
+  require("./stories/staff/StaffListPage")
+  require("./stories/staff/StaffDetailsPage")
 
   // Pages
   require("./stories/pages/PageContent");

@@ -1,9 +1,11 @@
 import graphene
-from django.contrib.auth import get_user_model, models as auth_models
+from django.contrib.auth import get_user_model
 from graphene import relay
 
 from ...account import models
-from ..core.types.common import CountableDjangoObjectType, PermissionDisplay
+from ...core.permissions import get_permissions
+from ..core.types.common import (
+    CountableDjangoObjectType, CountryDisplay, PermissionDisplay)
 from ..utils import format_permissions_for_display
 
 
@@ -22,11 +24,18 @@ class AddressInput(graphene.InputObjectType):
 
 
 class Address(CountableDjangoObjectType):
+    country = graphene.Field(
+        CountryDisplay, required=True, description='Default shop\'s country')
+
     class Meta:
         exclude_fields = ['user_set', 'user_addresses']
         description = 'Represents user address data.'
         interfaces = [relay.Node]
         model = models.Address
+
+    def resolve_country(self, info):
+        return CountryDisplay(
+            code=self.country.code, country=self.country.name)
 
 
 class User(CountableDjangoObjectType):
@@ -43,12 +52,10 @@ class User(CountableDjangoObjectType):
 
     def resolve_permissions(self, info, **kwargs):
         if self.is_superuser:
-            permissions = auth_models.Permission.objects.all()
+            permissions = get_permissions()
         else:
-            permissions = (
-                self.user_permissions.all() |
-                auth_models.Permission.objects.filter(group__user=self))
-        permissions = permissions.select_related('content_type')
+            permissions = self.user_permissions.prefetch_related(
+                'content_type').order_by('codename')
         return format_permissions_for_display(permissions)
 
 

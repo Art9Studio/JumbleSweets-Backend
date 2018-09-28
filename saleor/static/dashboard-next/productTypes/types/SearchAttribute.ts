@@ -5,20 +5,28 @@
 // GraphQL query operation: SearchAttribute
 // ====================================================
 
-export interface SearchAttribute_attributes_edges_node {
-  __typename: "ProductAttribute";
+export interface SearchAttribute_attributes_edges_node_values {
+  __typename: "AttributeValue";
   id: string;
-  slug: string | null;
   name: string | null;
+  slug: string | null;
+}
+
+export interface SearchAttribute_attributes_edges_node {
+  __typename: "Attribute";
+  id: string;
+  name: string | null;
+  slug: string | null;
+  values: (SearchAttribute_attributes_edges_node_values | null)[] | null;
 }
 
 export interface SearchAttribute_attributes_edges {
-  __typename: "ProductAttributeCountableEdge";
+  __typename: "AttributeCountableEdge";
   node: SearchAttribute_attributes_edges_node;
 }
 
 export interface SearchAttribute_attributes {
-  __typename: "ProductAttributeCountableConnection";
+  __typename: "AttributeCountableConnection";
   edges: SearchAttribute_attributes_edges[];
 }
 

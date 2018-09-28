@@ -5,30 +5,20 @@
 // GraphQL query operation: ProductCreateData
 // ====================================================
 
-export interface ProductCreateData_productTypes_edges_node_productAttributes_edges_node_values {
-  __typename: "ProductAttributeValue";
+export interface ProductCreateData_productTypes_edges_node_productAttributes_values {
+  __typename: "AttributeValue";
   id: string;
   sortOrder: number;
   name: string | null;
   slug: string | null;
 }
 
-export interface ProductCreateData_productTypes_edges_node_productAttributes_edges_node {
-  __typename: "ProductAttribute";
+export interface ProductCreateData_productTypes_edges_node_productAttributes {
+  __typename: "Attribute";
   id: string;
   slug: string | null;
   name: string | null;
-  values: (ProductCreateData_productTypes_edges_node_productAttributes_edges_node_values | null)[] | null;
-}
-
-export interface ProductCreateData_productTypes_edges_node_productAttributes_edges {
-  __typename: "ProductAttributeCountableEdge";
-  node: ProductCreateData_productTypes_edges_node_productAttributes_edges_node;
-}
-
-export interface ProductCreateData_productTypes_edges_node_productAttributes {
-  __typename: "ProductAttributeCountableConnection";
-  edges: ProductCreateData_productTypes_edges_node_productAttributes_edges[];
+  values: (ProductCreateData_productTypes_edges_node_productAttributes_values | null)[] | null;
 }
 
 export interface ProductCreateData_productTypes_edges_node {
@@ -36,7 +26,7 @@ export interface ProductCreateData_productTypes_edges_node {
   id: string;
   name: string;
   hasVariants: boolean;
-  productAttributes: ProductCreateData_productTypes_edges_node_productAttributes | null;
+  productAttributes: (ProductCreateData_productTypes_edges_node_productAttributes | null)[] | null;
 }
 
 export interface ProductCreateData_productTypes_edges {

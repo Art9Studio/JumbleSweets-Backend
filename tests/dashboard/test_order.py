@@ -937,7 +937,7 @@ def test_view_order_shipping_edit(
     assert get_redirect_location(response) == redirect_url
     draft_order.refresh_from_db()
     assert draft_order.shipping_method_name == method.name
-    assert draft_order.shipping_price == method.get_total_price(taxes=vatlayer)
+    assert draft_order.shipping_price == method.get_total(taxes=vatlayer)
     assert draft_order.shipping_method == method
 
 
@@ -1232,7 +1232,10 @@ def test_order_event_display(admin_user, type, order):
         'quantity': 12,
         'email_type': OrderEventsEmails.PAYMENT.value,
         'email': 'example@example.com',
-        'amount': '80.00', 'composed_id': 12}
+        'amount': '80.00',
+        'composed_id': 12,
+        'tracking_number': '5421AB',
+        'oversold_items': ['Blue Shirt', 'Red Shirt']}
     event = OrderEvent(
         user=admin_user, order=order, parameters=parameters, type=type)
     event.get_event_display()

@@ -18,6 +18,15 @@ import {
   OrderDraftUpdate,
   OrderDraftUpdateVariables
 } from "./types/OrderDraftUpdate";
+import { OrderLineAdd, OrderLineAddVariables } from "./types/OrderLineAdd";
+import {
+  OrderLineDelete,
+  OrderLineDeleteVariables
+} from "./types/OrderLineDelete";
+import {
+  OrderLineUpdate,
+  OrderLineUpdateVariables
+} from "./types/OrderLineUpdate";
 import { OrderRefund, OrderRefundVariables } from "./types/OrderRefund";
 import { OrderRelease, OrderReleaseVariables } from "./types/OrderRelease";
 import {
@@ -95,8 +104,11 @@ export const TypedOrderCaptureMutation = TypedMutation<
 >(orderCaptureMutation);
 
 const orderCreateFulfillmentMutation = gql`
-  mutation OrderCreateFulfillment($input: FulfillmentCreateInput!) {
-    fulfillmentCreate(input: $input) {
+  mutation OrderCreateFulfillment(
+    $order: ID!
+    $input: FulfillmentCreateInput!
+  ) {
+    orderFulfillmentCreate(order: $order, input: $input) {
       errors {
         field
         message
@@ -225,3 +237,60 @@ export const TypedOrderDraftCreateMutation = TypedMutation<
   OrderDraftCreate,
   {}
 >(orderDraftCreateMutation);
+
+const orderLineDeleteMutation = gql`
+  ${fragmentOrderDetails}
+  mutation OrderLineDelete($id: ID!) {
+    draftOrderLineDelete(id: $id) {
+      errors {
+        field
+        message
+      }
+      order {
+        ...OrderDetailsFragment
+      }
+    }
+  }
+`;
+export const TypedOrderLineDeleteMutation = TypedMutation<
+  OrderLineDelete,
+  OrderLineDeleteVariables
+>(orderLineDeleteMutation);
+
+const orderLineAddMutation = gql`
+  ${fragmentOrderDetails}
+  mutation OrderLineAdd($id: ID!, $input: OrderLineCreateInput!) {
+    draftOrderLineCreate(id: $id, input: $input) {
+      errors {
+        field
+        message
+      }
+      order {
+        ...OrderDetailsFragment
+      }
+    }
+  }
+`;
+export const TypedOrderLineAddMutation = TypedMutation<
+  OrderLineAdd,
+  OrderLineAddVariables
+>(orderLineAddMutation);
+
+const orderLineUpdateMutation = gql`
+  ${fragmentOrderDetails}
+  mutation OrderLineUpdate($id: ID!, $input: OrderLineInput!) {
+    draftOrderLineUpdate(id: $id, input: $input) {
+      errors {
+        field
+        message
+      }
+      order {
+        ...OrderDetailsFragment
+      }
+    }
+  }
+`;
+export const TypedOrderLineUpdateMutation = TypedMutation<
+  OrderLineUpdate,
+  OrderLineUpdateVariables
+>(orderLineUpdateMutation);

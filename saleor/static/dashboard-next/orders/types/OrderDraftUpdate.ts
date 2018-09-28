@@ -1,7 +1,7 @@
 /* tslint:disable */
 // This file was automatically generated and should not be edited.
 
-import { DraftOrderInput, AddressCountry, OrderEventsEmails, OrderEvents, FulfillmentStatus, PaymentStatusEnum, OrderStatus } from "./../../types/globalTypes";
+import { DraftOrderInput, OrderEventsEmails, OrderEvents, FulfillmentStatus, PaymentStatusEnum, OrderStatus } from "./../../types/globalTypes";
 
 // ====================================================
 // GraphQL mutation operation: OrderDraftUpdate
@@ -13,13 +13,19 @@ export interface OrderDraftUpdate_draftOrderUpdate_errors {
   message: string | null;
 }
 
+export interface OrderDraftUpdate_draftOrderUpdate_order_billingAddress_country {
+  __typename: "CountryDisplay";
+  code: string;
+  country: string;
+}
+
 export interface OrderDraftUpdate_draftOrderUpdate_order_billingAddress {
   __typename: "Address";
   id: string;
   city: string;
   cityArea: string;
   companyName: string;
-  country: AddressCountry;
+  country: OrderDraftUpdate_draftOrderUpdate_order_billingAddress_country;
   countryArea: string;
   firstName: string;
   lastName: string;
@@ -104,6 +110,7 @@ export interface OrderDraftUpdate_draftOrderUpdate_order_lines_edges_node {
   quantity: number;
   quantityFulfilled: number;
   unitPrice: OrderDraftUpdate_draftOrderUpdate_order_lines_edges_node_unitPrice | null;
+  thumbnailUrl: string | null;
 }
 
 export interface OrderDraftUpdate_draftOrderUpdate_order_lines_edges {
@@ -116,13 +123,19 @@ export interface OrderDraftUpdate_draftOrderUpdate_order_lines {
   edges: OrderDraftUpdate_draftOrderUpdate_order_lines_edges[];
 }
 
+export interface OrderDraftUpdate_draftOrderUpdate_order_shippingAddress_country {
+  __typename: "CountryDisplay";
+  code: string;
+  country: string;
+}
+
 export interface OrderDraftUpdate_draftOrderUpdate_order_shippingAddress {
   __typename: "Address";
   id: string;
   city: string;
   cityArea: string;
   companyName: string;
-  country: AddressCountry;
+  country: OrderDraftUpdate_draftOrderUpdate_order_shippingAddress_country;
   countryArea: string;
   firstName: string;
   lastName: string;

@@ -12,11 +12,11 @@ exports[`Storyshots Categories / CategoryProducts when loading data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Products
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -197,11 +197,11 @@ exports[`Storyshots Categories / CategoryProducts with clickable rows 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Products
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -460,11 +460,11 @@ exports[`Storyshots Categories / CategoryProducts with initial data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Products
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -723,11 +723,11 @@ exports[`Storyshots Categories / CategoryProducts without initial data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Products
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -1095,7 +1095,7 @@ exports[`Storyshots Generics / AddressEdit default 1`] = `
           <input
             name="country"
             type="hidden"
-            value="Swaziland"
+            value="SW"
           />
           <svg
             aria-hidden="true"
@@ -4636,11 +4636,11 @@ exports[`Storyshots Orders / OrderCustomer when loaded data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Customer
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -4671,11 +4671,11 @@ exports[`Storyshots Orders / OrderCustomer when loaded data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Shipping Address
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -4721,9 +4721,7 @@ exports[`Storyshots Orders / OrderCustomer when loaded data 1`] = `
       </p>
       <p
         class="MuiTypography-root-id MuiTypography-body1-id"
-      >
-        Cyprus
-      </p>
+      />
     </div>
     <hr
       class="OrderCustomer-hr-id"
@@ -4731,11 +4729,11 @@ exports[`Storyshots Orders / OrderCustomer when loaded data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Billing Address
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -4782,11 +4780,11 @@ exports[`Storyshots Orders / OrderCustomer when loading data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Customer
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -4817,11 +4815,11 @@ exports[`Storyshots Orders / OrderCustomer when loading data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Shipping Address
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -4860,11 +4858,11 @@ exports[`Storyshots Orders / OrderCustomer when loading data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Billing Address
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -4909,11 +4907,11 @@ exports[`Storyshots Orders / OrderCustomer with different addresses 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Customer
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -4944,11 +4942,11 @@ exports[`Storyshots Orders / OrderCustomer with different addresses 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Shipping Address
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -4994,9 +4992,7 @@ exports[`Storyshots Orders / OrderCustomer with different addresses 1`] = `
       </p>
       <p
         class="MuiTypography-root-id MuiTypography-body1-id"
-      >
-        Cyprus
-      </p>
+      />
     </div>
     <hr
       class="OrderCustomer-hr-id"
@@ -5004,11 +5000,11 @@ exports[`Storyshots Orders / OrderCustomer with different addresses 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Billing Address
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -5054,9 +5050,7 @@ exports[`Storyshots Orders / OrderCustomer with different addresses 1`] = `
       </p>
       <p
         class="MuiTypography-root-id MuiTypography-body1-id"
-      >
-        Cyprus
-      </p>
+      />
     </div>
   </div>
 </div>
@@ -5377,11 +5371,11 @@ exports[`Storyshots Orders / OrderSummary order cancelled 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -5627,11 +5621,11 @@ exports[`Storyshots Orders / OrderSummary order draft 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       >
@@ -5874,11 +5868,11 @@ exports[`Storyshots Orders / OrderSummary order fulfilled 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -6142,11 +6136,11 @@ exports[`Storyshots Orders / OrderSummary order partially fulfilled 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -6424,11 +6418,11 @@ exports[`Storyshots Orders / OrderSummary order unfulfilled 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -6706,11 +6700,11 @@ exports[`Storyshots Orders / OrderSummary payment confirmed 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -6974,11 +6968,11 @@ exports[`Storyshots Orders / OrderSummary payment error 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -7242,11 +7236,11 @@ exports[`Storyshots Orders / OrderSummary payment input 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -7510,11 +7504,11 @@ exports[`Storyshots Orders / OrderSummary payment preauth 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -7778,11 +7772,11 @@ exports[`Storyshots Orders / OrderSummary payment refunded 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -8046,11 +8040,11 @@ exports[`Storyshots Orders / OrderSummary payment rejected 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -8314,11 +8308,11 @@ exports[`Storyshots Orders / OrderSummary payment waiting 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -8582,11 +8576,11 @@ exports[`Storyshots Orders / OrderSummary when loading data 1`] = `
     <div
       class="Component-root-id"
     >
-      <aside
-        class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+      <p
+        class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
       >
         Order Summary
-      </aside>
+      </p>
       <div
         class="Component-toolbar-id"
       />
@@ -9384,11 +9378,11 @@ exports[`Storyshots Views / Attributes / Attribute details default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Attribute values
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -9759,11 +9753,11 @@ exports[`Storyshots Views / Attributes / Attribute details when loading 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Attribute values
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -9991,11 +9985,11 @@ exports[`Storyshots Views / Attributes / Attribute details when no values 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Attribute values
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -10870,8 +10864,9 @@ exports[`Storyshots Views / Authentication / Log in default 1`] = `
           class="Component-spacer-id"
         />
         <button
-          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id Component-loginButton-id"
-          tabindex="0"
+          class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id MuiButton-disabled-id Component-loginButton-id"
+          disabled=""
+          tabindex="-1"
           type="submit"
         >
           <span
@@ -10879,9 +10874,6 @@ exports[`Storyshots Views / Authentication / Log in default 1`] = `
           >
             Login
           </span>
-          <span
-            class="MuiTouchRipple-root-id"
-          />
         </button>
       </div>
     </div>
@@ -11002,8 +10994,9 @@ exports[`Storyshots Views / Authentication / Log in error 1`] = `
           class="Component-spacer-id"
         />
         <button
-          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id Component-loginButton-id"
-          tabindex="0"
+          class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id MuiButton-disabled-id Component-loginButton-id"
+          disabled=""
+          tabindex="-1"
           type="submit"
         >
           <span
@@ -11011,13 +11004,157 @@ exports[`Storyshots Views / Authentication / Log in error 1`] = `
           >
             Login
           </span>
-          <span
-            class="MuiTouchRipple-root-id"
-          />
         </button>
       </div>
     </div>
   </form>
+</div>
+`;
+
+exports[`Storyshots Views / Authentication / Log in loading 1`] = `
+<div>
+  <form>
+    <div
+      class="Component-sm-id Component-root-id"
+    >
+      <div
+        class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id Component-card-id"
+      >
+        <span
+          class="isvg pending Component-logo-id"
+        />
+        <div
+          class="MuiFormControl-root-id MuiFormControl-fullWidth-id"
+        >
+          <label
+            class="MuiFormLabel-root-id MuiInputLabel-root-id MuiInputLabel-formControl-id MuiInputLabel-animated-id"
+            data-shrink="false"
+          >
+            Email
+          </label>
+          <div
+            class="MuiInput-root-id MuiInput-fullWidth-id MuiInput-formControl-id MuiInput-underline-id"
+          >
+            <input
+              aria-invalid="false"
+              autocomplete="username"
+              autofocus=""
+              class="MuiInput-input-id"
+              name="email"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="Component-spacer-id"
+        />
+        <div
+          class="MuiFormControl-root-id MuiFormControl-fullWidth-id"
+        >
+          <label
+            class="MuiFormLabel-root-id MuiInputLabel-root-id MuiInputLabel-formControl-id MuiInputLabel-animated-id"
+            data-shrink="false"
+          >
+            Password
+          </label>
+          <div
+            class="MuiInput-root-id MuiInput-fullWidth-id MuiInput-formControl-id MuiInput-underline-id"
+          >
+            <input
+              aria-invalid="false"
+              autocomplete="current-password"
+              class="MuiInput-input-id MuiInput-inputType-id"
+              name="password"
+              type="password"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="Component-spacer-id"
+        />
+        <label
+          class="MuiFormControlLabel-root-id"
+        >
+          <span
+            class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id"
+          >
+            <span
+              class="MuiIconButton-label-id"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-id"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+              <input
+                class="MuiSwitchBase-input-id"
+                name="rememberMe"
+                type="checkbox"
+              />
+            </span>
+            <span
+              class="MuiTouchRipple-root-id"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+          >
+            Remember me
+          </span>
+        </label>
+        <div
+          class="Component-spacer-id"
+        />
+        <button
+          class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id MuiButton-disabled-id Component-loginButton-id"
+          disabled=""
+          tabindex="-1"
+          type="submit"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Login
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Views / Authentication / Verifying remembered user default 1`] = `
+<div>
+  <div
+    class="Component-root-id"
+  >
+    <div
+      class="MuiCircularProgress-root-id MuiCircularProgress-colorPrimary-id MuiCircularProgress-indeterminate-id"
+      role="progressbar"
+      style="width:128px;height:128px"
+    >
+      <svg
+        class="MuiCircularProgress-svg-id"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          class="MuiCircularProgress-circle-id MuiCircularProgress-circleIndeterminate-id"
+          cx="44"
+          cy="44"
+          fill="none"
+          r="20.2"
+          stroke-width="3.6"
+        />
+      </svg>
+    </div>
+  </div>
 </div>
 `;
 
@@ -11070,11 +11207,11 @@ exports[`Storyshots Views / Categories / Category details default 1`] = `
         <div
           class="Component-root-id"
         >
-          <aside
-            class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+          <p
+            class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
           >
             Details
-          </aside>
+          </p>
           <div
             class="Component-toolbar-id"
           >
@@ -11120,11 +11257,11 @@ Tell lose part purpose do when. Whatever drug contain particularly defense.
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Subcategories
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -11234,11 +11371,11 @@ Tell lose part purpose do when. Whatever drug contain particularly defense.
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Products
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -11852,11 +11989,11 @@ exports[`Storyshots Views / Categories / Category details when loading 1`] = `
         <div
           class="Component-root-id"
         >
-          <aside
-            class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+          <p
+            class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
           >
             Details
-          </aside>
+          </p>
           <div
             class="Component-toolbar-id"
           >
@@ -11901,11 +12038,11 @@ exports[`Storyshots Views / Categories / Category details when loading 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Subcategories
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -12008,11 +12145,11 @@ exports[`Storyshots Views / Categories / Category details when loading 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Products
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -12765,11 +12902,11 @@ exports[`Storyshots Views / Collections / Collection details default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Products
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -13021,11 +13158,11 @@ exports[`Storyshots Views / Collections / Collection details default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Search Engine Preview
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -13069,11 +13206,11 @@ exports[`Storyshots Views / Collections / Collection details default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Properties
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -13334,11 +13471,11 @@ exports[`Storyshots Views / Collections / Collection details when loading 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Products
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -13504,11 +13641,11 @@ exports[`Storyshots Views / Collections / Collection details when loading 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Search Engine Preview
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -13552,11 +13689,11 @@ exports[`Storyshots Views / Collections / Collection details when loading 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Properties
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -14388,7 +14525,7 @@ exports[`Storyshots Views / Configuration default 1`] = `
         </div>
       </div>
       <div
-        class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id Component-cardDisabled-id"
+        class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id Component-card-id"
       >
         <div
           class="MuiCardContent-root-id Component-cardContent-id"
@@ -14709,11 +14846,11 @@ exports[`Storyshots Views / Customers / Customer details default 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               User details
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -15127,11 +15264,11 @@ exports[`Storyshots Views / Customers / Customer details default 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Default billing address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -15175,11 +15312,11 @@ exports[`Storyshots Views / Customers / Customer details default 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Default shipping address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -15256,11 +15393,11 @@ exports[`Storyshots Views / Customers / Customer details when loading 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               User details
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -15472,11 +15609,11 @@ exports[`Storyshots Views / Customers / Customer details when loading 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Default billing address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -15502,11 +15639,11 @@ exports[`Storyshots Views / Customers / Customer details when loading 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Default shipping address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -16768,11 +16905,11 @@ exports[`Storyshots Views / Orders / Order details as a draft 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Order Summary
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -17298,11 +17435,11 @@ exports[`Storyshots Views / Orders / Order details as a draft 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Customer
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -17348,11 +17485,11 @@ exports[`Storyshots Views / Orders / Order details as a draft 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Shipping Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -17398,9 +17535,7 @@ exports[`Storyshots Views / Orders / Order details as a draft 1`] = `
             </p>
             <p
               class="MuiTypography-root-id MuiTypography-body1-id"
-            >
-              Cyprus
-            </p>
+            />
           </div>
           <hr
             class="OrderCustomer-hr-id"
@@ -17408,11 +17543,11 @@ exports[`Storyshots Views / Orders / Order details as a draft 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Billing Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -17522,11 +17657,11 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Order Summary
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -17821,11 +17956,11 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Fulfillment #f1
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -17961,11 +18096,11 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Fulfillment #f2
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -18338,11 +18473,11 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Customer
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -18373,11 +18508,11 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Shipping Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -18423,9 +18558,7 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
             </p>
             <p
               class="MuiTypography-root-id MuiTypography-body1-id"
-            >
-              Cyprus
-            </p>
+            />
           </div>
           <hr
             class="OrderCustomer-hr-id"
@@ -18433,11 +18566,11 @@ exports[`Storyshots Views / Orders / Order details as a unpaid order 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Billing Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -18547,11 +18680,11 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Order Summary
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -18818,11 +18951,11 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Fulfillment #f1
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -18958,11 +19091,11 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Fulfillment #f2
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -19335,11 +19468,11 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Customer
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -19370,11 +19503,11 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Shipping Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -19420,9 +19553,7 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
             </p>
             <p
               class="MuiTypography-root-id MuiTypography-body1-id"
-            >
-              Cyprus
-            </p>
+            />
           </div>
           <hr
             class="OrderCustomer-hr-id"
@@ -19430,11 +19561,11 @@ exports[`Storyshots Views / Orders / Order details when loaded data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Billing Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -19541,11 +19672,11 @@ exports[`Storyshots Views / Orders / Order details when loading data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Order Summary
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -19788,8 +19919,8 @@ exports[`Storyshots Views / Orders / Order details when loading data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             />
             <div
               class="Component-toolbar-id"
@@ -19938,11 +20069,11 @@ exports[`Storyshots Views / Orders / Order details when loading data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Customer
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             />
@@ -19973,11 +20104,11 @@ exports[`Storyshots Views / Orders / Order details when loading data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Shipping Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -20018,11 +20149,11 @@ exports[`Storyshots Views / Orders / Order details when loading data 1`] = `
           <div
             class="Component-root-id"
           >
-            <aside
-              class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+            <p
+              class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
             >
               Billing Address
-            </aside>
+            </p>
             <div
               class="Component-toolbar-id"
             >
@@ -22356,11 +22487,11 @@ exports[`Storyshots Views / Product types / Product type details default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Properties
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -22695,11 +22826,11 @@ exports[`Storyshots Views / Product types / Product type details loading 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Properties
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -23469,11 +23600,11 @@ exports[`Storyshots Views / Products / Create product When loading 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -23575,11 +23706,11 @@ exports[`Storyshots Views / Products / Create product When loading 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Pricing
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -23676,11 +23807,11 @@ exports[`Storyshots Views / Products / Create product When loading 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Search Engine Preview
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -23725,11 +23856,11 @@ exports[`Storyshots Views / Products / Create product When loading 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Organize Product
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -23942,11 +24073,11 @@ exports[`Storyshots Views / Products / Create product When loading 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Availability
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -24098,11 +24229,11 @@ exports[`Storyshots Views / Products / Create product default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -24202,11 +24333,11 @@ exports[`Storyshots Views / Products / Create product default 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Pricing
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -24303,11 +24434,11 @@ exports[`Storyshots Views / Products / Create product default 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Search Engine Preview
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -24352,11 +24483,11 @@ exports[`Storyshots Views / Products / Create product default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Organize Product
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -24570,11 +24701,11 @@ exports[`Storyshots Views / Products / Create product default 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Availability
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -24727,11 +24858,11 @@ exports[`Storyshots Views / Products / Create product variant default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Variants
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -24802,11 +24933,11 @@ exports[`Storyshots Views / Products / Create product variant default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -24874,11 +25005,11 @@ exports[`Storyshots Views / Products / Create product variant default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Pricing
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -24980,11 +25111,11 @@ exports[`Storyshots Views / Products / Create product variant default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Stock
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25143,11 +25274,11 @@ exports[`Storyshots Views / Products / Create product variant when loading data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Variants
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25209,11 +25340,11 @@ exports[`Storyshots Views / Products / Create product variant when loading data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25240,11 +25371,11 @@ exports[`Storyshots Views / Products / Create product variant when loading data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Pricing
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25348,11 +25479,11 @@ exports[`Storyshots Views / Products / Create product variant when loading data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Stock
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25513,11 +25644,11 @@ exports[`Storyshots Views / Products / Create product variant with errors 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Variants
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25588,11 +25719,11 @@ exports[`Storyshots Views / Products / Create product variant with errors 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25660,11 +25791,11 @@ exports[`Storyshots Views / Products / Create product variant with errors 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Pricing
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25766,11 +25897,11 @@ exports[`Storyshots Views / Products / Create product variant with errors 1`] = 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Stock
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -25934,11 +26065,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -26042,11 +26173,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Images
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -26431,11 +26562,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Pricing
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -26532,11 +26663,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Variants
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -26663,11 +26794,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Search Engine Preview
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -26712,11 +26843,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Organize Product
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -27033,11 +27164,11 @@ exports[`Storyshots Views / Products / Product edit when data is fully loaded 1`
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Availability
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -27231,11 +27362,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -27337,11 +27468,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Images
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -27399,11 +27530,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Pricing
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -27492,11 +27623,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Inventory
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -27568,11 +27699,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Search Engine Preview
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -27617,11 +27748,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Organize Product
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -27839,11 +27970,11 @@ exports[`Storyshots Views / Products / Product edit when loading data 1`] = `
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Availability
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -28009,11 +28140,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -28117,11 +28248,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Images
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -28188,11 +28319,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Pricing
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -28289,11 +28420,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Variants
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -28420,11 +28551,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Search Engine Preview
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -28469,11 +28600,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Organize Product
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -28790,11 +28921,11 @@ exports[`Storyshots Views / Products / Product edit when product has no images 1
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Availability
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -28983,11 +29114,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -29091,11 +29222,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Images
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -29480,11 +29611,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Pricing
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -29581,11 +29712,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Inventory
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -29657,11 +29788,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Search Engine Preview
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 >
@@ -29706,11 +29837,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Organize Product
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -30027,11 +30158,11 @@ exports[`Storyshots Views / Products / Product edit when product has no variants
               <div
                 class="Component-root-id"
               >
-                <aside
-                  class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
                 >
                   Availability
-                </aside>
+                </p>
                 <div
                   class="Component-toolbar-id"
                 />
@@ -30220,11 +30351,11 @@ exports[`Storyshots Views / Products / Product image details when loaded data 1`
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 All photos
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -30314,11 +30445,11 @@ exports[`Storyshots Views / Products / Product image details when loaded data 1`
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Photo Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -30391,11 +30522,11 @@ exports[`Storyshots Views / Products / Product image details when loaded data 1`
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Photo View
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -30512,11 +30643,11 @@ exports[`Storyshots Views / Products / Product image details when loading data 1
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 All photos
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -30543,11 +30674,11 @@ exports[`Storyshots Views / Products / Product image details when loading data 1
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Photo Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -30617,11 +30748,11 @@ exports[`Storyshots Views / Products / Product image details when loading data 1
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Photo View
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -31694,11 +31825,11 @@ exports[`Storyshots Views / Products / Product variant details when loaded data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Variants
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -31843,11 +31974,11 @@ exports[`Storyshots Views / Products / Product variant details when loaded data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -31961,11 +32092,11 @@ exports[`Storyshots Views / Products / Product variant details when loaded data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Images
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -32038,11 +32169,11 @@ exports[`Storyshots Views / Products / Product variant details when loaded data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Pricing
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -32144,11 +32275,11 @@ exports[`Storyshots Views / Products / Product variant details when loaded data 
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Stock
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -32331,11 +32462,11 @@ exports[`Storyshots Views / Products / Product variant details when loading data
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Variants
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -32397,11 +32528,11 @@ exports[`Storyshots Views / Products / Product variant details when loading data
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 General Information
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -32428,11 +32559,11 @@ exports[`Storyshots Views / Products / Product variant details when loading data
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Images
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               >
@@ -32476,11 +32607,11 @@ exports[`Storyshots Views / Products / Product variant details when loading data
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Pricing
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -32568,11 +32699,11 @@ exports[`Storyshots Views / Products / Product variant details when loading data
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Stock
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -32689,6 +32820,2206 @@ exports[`Storyshots Views / Products / Product variant details when loading data
         </button>
       </div>
     </form>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Views / Staff / Staff member details default 1`] = `
+<div>
+  <form>
+    <div
+      class="Component-md-id"
+    >
+      <div
+        class="Component-root-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiIconButton-root-id MuiIconButton-colorInherit-id Component-menuButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-id"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-id"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <h2
+          class="MuiTypography-root-id MuiTypography-title-id PageHeader-title-id"
+        >
+          admin@example.com
+        </h2>
+        <div
+          class="Component-action-id"
+        />
+      </div>
+      <div
+        class="Component-root-id"
+      >
+        <div>
+          <div
+            class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id Component-card-id"
+          >
+            <div
+              class="Component-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+              >
+                Staff Member Information
+              </p>
+              <div
+                class="Component-toolbar-id"
+              />
+            </div>
+            <div
+              class="Component-children-id"
+            />
+            <hr
+              class="Component-hr-id"
+            />
+            <div
+              class="MuiCardContent-root-id"
+            >
+              <div
+                class="Component-root-id"
+              >
+                <div>
+                  <div
+                    class="Component-avatar-id"
+                  >
+                    <p
+                      class="MuiTypography-root-id MuiTypography-body1-id Component-avatarText-id"
+                    >
+                      AD
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="Component-propGrid-id"
+                  >
+                    <div>
+                      <div
+                        class="Component-prop-id"
+                      >
+                        <aside
+                          class="MuiTypography-root-id MuiTypography-body2-id"
+                        >
+                          E-mail
+                        </aside>
+                        <p
+                          class="MuiTypography-root-id MuiTypography-body1-id"
+                        >
+                          admin@example.com
+                        </p>
+                      </div>
+                      <div />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="Component-card-id"
+          >
+            <div
+              class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+            >
+              <div
+                class="Component-root-id"
+              >
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+                >
+                  Permissions
+                </p>
+                <div
+                  class="Component-toolbar-id"
+                />
+              </div>
+              <div
+                class="Component-children-id"
+              />
+              <hr
+                class="Component-hr-id"
+              />
+              <div
+                class="MuiCardContent-root-id"
+              >
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id"
+                >
+                  Expand or restrict user's permissions to access certain part of saleor system.
+                </p>
+                <div
+                  class="Component-checkboxContainer-id"
+                >
+                  <label
+                    class="MuiFormControlLabel-root-id"
+                  >
+                    <span
+                      class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                    >
+                      <span
+                        class="MuiIconButton-label-id"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-id"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                          />
+                        </svg>
+                        <input
+                          checked=""
+                          class="MuiSwitchBase-input-id"
+                          name="hasFullAccess"
+                          type="checkbox"
+                        />
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-id"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                    >
+                      User has full access to the store
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+          >
+            <div
+              class="Component-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+              >
+                Account Status
+              </p>
+              <div
+                class="Component-toolbar-id"
+              />
+            </div>
+            <div
+              class="Component-children-id"
+            />
+            <hr
+              class="Component-hr-id"
+            />
+            <div
+              class="MuiCardContent-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id"
+              >
+                If you want to disable this account uncheck the box below
+              </p>
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                >
+                  <span
+                    class="MuiIconButton-label-id"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-id"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
+                    </svg>
+                    <input
+                      checked=""
+                      class="MuiSwitchBase-input-id"
+                      name="isActive"
+                      type="checkbox"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                >
+                  User is active
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Component-root-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-raised-id Component-deleteButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Remove
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <div
+          class="Component-spacer-id"
+        />
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-text-id MuiButton-flat-id Component-cancelButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Cancel
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Save
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Views / Staff / Staff member details loading 1`] = `
+<div>
+  <form>
+    <div
+      class="Component-md-id"
+    >
+      <div
+        class="Component-root-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiIconButton-root-id MuiIconButton-colorInherit-id Component-menuButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-id"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-id"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <h2
+          class="MuiTypography-root-id MuiTypography-title-id PageHeader-title-id"
+        >
+          <span
+            class="Skeleton-skeleton-id"
+            style="width:10em"
+          >
+            ‌
+          </span>
+        </h2>
+        <div
+          class="Component-action-id"
+        />
+      </div>
+      <div
+        class="Component-root-id"
+      >
+        <div>
+          <div
+            class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id Component-card-id"
+          >
+            <div
+              class="Component-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+              >
+                Staff Member Information
+              </p>
+              <div
+                class="Component-toolbar-id"
+              />
+            </div>
+            <div
+              class="Component-children-id"
+            />
+            <hr
+              class="Component-hr-id"
+            />
+            <div
+              class="MuiCardContent-root-id"
+            >
+              <div
+                class="Component-root-id"
+              >
+                <div>
+                  <div
+                    class="Component-avatar-id"
+                  >
+                    <p
+                      class="MuiTypography-root-id MuiTypography-body1-id Component-avatarText-id"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="Component-propGrid-id"
+                  >
+                    <div>
+                      <div
+                        class="Component-prop-id"
+                      >
+                        <aside
+                          class="MuiTypography-root-id MuiTypography-body2-id"
+                        >
+                          E-mail
+                        </aside>
+                        <span
+                          class="Skeleton-skeleton-id"
+                        >
+                          ‌
+                        </span>
+                      </div>
+                      <div />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="Component-card-id"
+          >
+            <div
+              class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+            >
+              <div
+                class="Component-root-id"
+              >
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+                >
+                  Permissions
+                </p>
+                <div
+                  class="Component-toolbar-id"
+                />
+              </div>
+              <div
+                class="Component-children-id"
+              />
+              <hr
+                class="Component-hr-id"
+              />
+              <div
+                class="MuiCardContent-root-id"
+              >
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id"
+                >
+                  Expand or restrict user's permissions to access certain part of saleor system.
+                </p>
+                <div
+                  class="Component-checkboxContainer-id"
+                >
+                  <label
+                    class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                  >
+                    <span
+                      class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                      tabindex="-1"
+                    >
+                      <span
+                        class="MuiIconButton-label-id"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-id"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                          />
+                        </svg>
+                        <input
+                          class="MuiSwitchBase-input-id"
+                          disabled=""
+                          name="hasFullAccess"
+                          type="checkbox"
+                        />
+                      </span>
+                    </span>
+                    <span
+                      class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                    >
+                      User has full access to the store
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <hr
+                class="Component-hr-id"
+              />
+              <div
+                class="MuiCardContent-root-id"
+              >
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="account.impersonate_users"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Impersonate customers
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="discount.manage_discounts"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage sales and vouchers
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="menu.manage_menus"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage navigation
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="order.manage_orders"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage orders
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="page.manage_pages"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage pages
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="product.manage_products"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage products
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="site.manage_settings"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage settings
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="shipping.manage_shipping"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage shipping
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="account.manage_staff"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage staff
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        disabled=""
+                        name="account.manage_users"
+                        type="checkbox"
+                      />
+                    </span>
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                  >
+                    Manage customers
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+          >
+            <div
+              class="Component-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+              >
+                Account Status
+              </p>
+              <div
+                class="Component-toolbar-id"
+              />
+            </div>
+            <div
+              class="Component-children-id"
+            />
+            <hr
+              class="Component-hr-id"
+            />
+            <div
+              class="MuiCardContent-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id"
+              >
+                If you want to disable this account uncheck the box below
+              </p>
+              <label
+                class="MuiFormControlLabel-root-id MuiFormControlLabel-disabled-id"
+              >
+                <span
+                  class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-disabled-id MuiCheckbox-disabled-id"
+                  tabindex="-1"
+                >
+                  <span
+                    class="MuiIconButton-label-id"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-id"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                      />
+                    </svg>
+                    <input
+                      class="MuiSwitchBase-input-id"
+                      disabled=""
+                      name="isActive"
+                      type="checkbox"
+                    />
+                  </span>
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id MuiFormControlLabel-disabled-id"
+                >
+                  User is active
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Component-root-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-raised-id Component-deleteButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Remove
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <div
+          class="Component-spacer-id"
+        />
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-text-id MuiButton-flat-id Component-cancelButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Cancel
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Save
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Views / Staff / Staff member details not admin 1`] = `
+<div>
+  <form>
+    <div
+      class="Component-md-id"
+    >
+      <div
+        class="Component-root-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiIconButton-root-id MuiIconButton-colorInherit-id Component-menuButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label-id"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-id"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <h2
+          class="MuiTypography-root-id MuiTypography-title-id PageHeader-title-id"
+        >
+          admin@example.com
+        </h2>
+        <div
+          class="Component-action-id"
+        />
+      </div>
+      <div
+        class="Component-root-id"
+      >
+        <div>
+          <div
+            class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id Component-card-id"
+          >
+            <div
+              class="Component-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+              >
+                Staff Member Information
+              </p>
+              <div
+                class="Component-toolbar-id"
+              />
+            </div>
+            <div
+              class="Component-children-id"
+            />
+            <hr
+              class="Component-hr-id"
+            />
+            <div
+              class="MuiCardContent-root-id"
+            >
+              <div
+                class="Component-root-id"
+              >
+                <div>
+                  <div
+                    class="Component-avatar-id"
+                  >
+                    <p
+                      class="MuiTypography-root-id MuiTypography-body1-id Component-avatarText-id"
+                    >
+                      AD
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="Component-propGrid-id"
+                  >
+                    <div>
+                      <div
+                        class="Component-prop-id"
+                      >
+                        <aside
+                          class="MuiTypography-root-id MuiTypography-body2-id"
+                        >
+                          E-mail
+                        </aside>
+                        <p
+                          class="MuiTypography-root-id MuiTypography-body1-id"
+                        >
+                          admin@example.com
+                        </p>
+                      </div>
+                      <div />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="Component-card-id"
+          >
+            <div
+              class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+            >
+              <div
+                class="Component-root-id"
+              >
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+                >
+                  Permissions
+                </p>
+                <div
+                  class="Component-toolbar-id"
+                />
+              </div>
+              <div
+                class="Component-children-id"
+              />
+              <hr
+                class="Component-hr-id"
+              />
+              <div
+                class="MuiCardContent-root-id"
+              >
+                <p
+                  class="MuiTypography-root-id MuiTypography-body1-id"
+                >
+                  Expand or restrict user's permissions to access certain part of saleor system.
+                </p>
+                <div
+                  class="Component-checkboxContainer-id"
+                >
+                  <label
+                    class="MuiFormControlLabel-root-id"
+                  >
+                    <span
+                      class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id"
+                    >
+                      <span
+                        class="MuiIconButton-label-id"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root-id"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                          />
+                        </svg>
+                        <input
+                          class="MuiSwitchBase-input-id"
+                          name="hasFullAccess"
+                          type="checkbox"
+                        />
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root-id"
+                      />
+                    </span>
+                    <span
+                      class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                    >
+                      User has full access to the store
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <hr
+                class="Component-hr-id"
+              />
+              <div
+                class="MuiCardContent-root-id"
+              >
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        />
+                      </svg>
+                      <input
+                        class="MuiSwitchBase-input-id"
+                        name="account.impersonate_users"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Impersonate customers
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="discount.manage_discounts"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage sales and vouchers
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="menu.manage_menus"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage navigation
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="order.manage_orders"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage orders
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="page.manage_pages"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage pages
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="product.manage_products"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage products
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="site.manage_settings"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage settings
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="shipping.manage_shipping"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage shipping
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="account.manage_staff"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage staff
+                  </span>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root-id"
+                >
+                  <span
+                    class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                      <input
+                        checked=""
+                        class="MuiSwitchBase-input-id"
+                        name="account.manage_users"
+                        type="checkbox"
+                      />
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </span>
+                  <span
+                    class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                  >
+                    Manage customers
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+          >
+            <div
+              class="Component-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
+              >
+                Account Status
+              </p>
+              <div
+                class="Component-toolbar-id"
+              />
+            </div>
+            <div
+              class="Component-children-id"
+            />
+            <hr
+              class="Component-hr-id"
+            />
+            <div
+              class="MuiCardContent-root-id"
+            >
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id"
+              >
+                If you want to disable this account uncheck the box below
+              </p>
+              <label
+                class="MuiFormControlLabel-root-id"
+              >
+                <span
+                  class="MuiButtonBase-root-id MuiIconButton-root-id MuiSwitchBase-root-id MuiCheckbox-root-id MuiCheckbox-colorPrimary-id MuiSwitchBase-checked-id MuiCheckbox-checked-id"
+                >
+                  <span
+                    class="MuiIconButton-label-id"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-id"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
+                    </svg>
+                    <input
+                      checked=""
+                      class="MuiSwitchBase-input-id"
+                      name="isActive"
+                      type="checkbox"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-id"
+                  />
+                </span>
+                <span
+                  class="MuiTypography-root-id MuiTypography-body1-id MuiFormControlLabel-label-id"
+                >
+                  User is active
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Component-root-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-raised-id Component-deleteButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Remove
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <div
+          class="Component-spacer-id"
+        />
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-text-id MuiButton-flat-id Component-cancelButton-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Cancel
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Save
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Views / Staff / Staff members default 1`] = `
+<div>
+  <div
+    class="Component-md-id"
+  >
+    <div
+      class="Component-root-id"
+    >
+      <h2
+        class="MuiTypography-root-id MuiTypography-title-id PageHeader-title-id"
+      >
+        Staff members
+      </h2>
+      <div
+        class="Component-action-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Add staff member
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-id"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root-id"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+    >
+      <table
+        class="MuiTable-root-id"
+        padding="default"
+      >
+        <thead
+          class="MuiTableHead-root-id"
+        >
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-head-id"
+          >
+            <th
+              class="MuiTableCell-root-id MuiTableCell-head-id"
+              scope="col"
+            >
+              E-mail
+            </th>
+            <th
+              class="MuiTableCell-root-id MuiTableCell-head-id"
+              scope="col"
+            >
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tfoot
+          class="MuiTableFooter-root-id"
+        >
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-footer-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-footer-id TablePagination-root-id"
+              colspan="3"
+            >
+              <div
+                class="MuiToolbar-root-id MuiToolbar-regular-id MuiToolbar-gutters-id TablePagination-toolbar-id"
+              >
+                <div
+                  class="TablePagination-spacer-id"
+                />
+                <div
+                  class="TablePaginationActions-root-id"
+                >
+                  <button
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <button
+                    class="MuiButtonBase-root-id MuiIconButton-root-id"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-id"
+                    />
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+        <tbody
+          class="MuiTableBody-root-id"
+        >
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-errorDot-id"
+              >
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-errorDot-id"
+              >
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-errorDot-id"
+              >
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-errorDot-id"
+              >
+                Inactive
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-hover-id Component-tableRow-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span>
+                admin@example.com
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <div
+                class="Component-root-id undefined Component-successDot-id"
+              >
+                Active
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Views / Staff / Staff members when loading 1`] = `
+<div>
+  <div
+    class="Component-md-id"
+  >
+    <div
+      class="Component-root-id"
+    >
+      <h2
+        class="MuiTypography-root-id MuiTypography-title-id PageHeader-title-id"
+      >
+        Staff members
+      </h2>
+      <div
+        class="Component-action-id"
+      >
+        <button
+          class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiButton-root-id MuiButton-contained-id MuiButton-containedSecondary-id MuiButton-raised-id MuiButton-raisedSecondary-id MuiButton-disabled-id"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-id"
+          >
+            Add staff member
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-id"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root-id MuiPaper-elevation1-id MuiPaper-rounded-id MuiCard-root-id"
+    >
+      <table
+        class="MuiTable-root-id"
+        padding="default"
+      >
+        <thead
+          class="MuiTableHead-root-id"
+        >
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-head-id"
+          >
+            <th
+              class="MuiTableCell-root-id MuiTableCell-head-id"
+              scope="col"
+            >
+              E-mail
+            </th>
+            <th
+              class="MuiTableCell-root-id MuiTableCell-head-id"
+              scope="col"
+            >
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tfoot
+          class="MuiTableFooter-root-id"
+        >
+          <tr
+            class="MuiTableRow-root-id MuiTableRow-footer-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-footer-id TablePagination-root-id"
+              colspan="3"
+            >
+              <div
+                class="MuiToolbar-root-id MuiToolbar-regular-id MuiToolbar-gutters-id TablePagination-toolbar-id"
+              >
+                <div
+                  class="TablePagination-spacer-id"
+                />
+                <div
+                  class="TablePaginationActions-root-id"
+                >
+                  <button
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <button
+                    class="MuiButtonBase-root-id MuiButtonBase-disabled-id MuiIconButton-root-id MuiIconButton-disabled-id"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label-id"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-id"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+        <tbody
+          class="MuiTableBody-root-id"
+        >
+          <tr
+            class="MuiTableRow-root-id"
+          >
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span
+                class="Skeleton-skeleton-id"
+              >
+                ‌
+              </span>
+            </td>
+            <td
+              class="MuiTableCell-root-id MuiTableCell-body-id"
+            >
+              <span
+                class="Skeleton-skeleton-id"
+              >
+                ‌
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 `;
@@ -32881,11 +35212,11 @@ exports[`Storyshots Views / Vouchers / Voucher details default 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Voucher type
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />
@@ -33467,11 +35798,11 @@ exports[`Storyshots Views / Vouchers / Voucher details when loading 1`] = `
             <div
               class="Component-root-id"
             >
-              <aside
-                class="MuiTypography-root-id MuiTypography-body2-id Component-title-id"
+              <p
+                class="MuiTypography-root-id MuiTypography-body1-id Component-title-id"
               >
                 Voucher type
-              </aside>
+              </p>
               <div
                 class="Component-toolbar-id"
               />

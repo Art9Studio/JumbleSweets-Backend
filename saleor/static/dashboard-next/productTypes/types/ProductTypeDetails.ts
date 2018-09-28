@@ -7,38 +7,34 @@ import { TaxRateType } from "./../../types/globalTypes";
 // GraphQL query operation: ProductTypeDetails
 // ====================================================
 
-export interface ProductTypeDetails_productType_productAttributes_edges_node {
-  __typename: "ProductAttribute";
+export interface ProductTypeDetails_productType_productAttributes_values {
+  __typename: "AttributeValue";
   id: string;
-  slug: string | null;
   name: string | null;
-}
-
-export interface ProductTypeDetails_productType_productAttributes_edges {
-  __typename: "ProductAttributeCountableEdge";
-  node: ProductTypeDetails_productType_productAttributes_edges_node;
+  slug: string | null;
 }
 
 export interface ProductTypeDetails_productType_productAttributes {
-  __typename: "ProductAttributeCountableConnection";
-  edges: ProductTypeDetails_productType_productAttributes_edges[];
-}
-
-export interface ProductTypeDetails_productType_variantAttributes_edges_node {
-  __typename: "ProductAttribute";
+  __typename: "Attribute";
   id: string;
-  slug: string | null;
   name: string | null;
+  slug: string | null;
+  values: (ProductTypeDetails_productType_productAttributes_values | null)[] | null;
 }
 
-export interface ProductTypeDetails_productType_variantAttributes_edges {
-  __typename: "ProductAttributeCountableEdge";
-  node: ProductTypeDetails_productType_variantAttributes_edges_node;
+export interface ProductTypeDetails_productType_variantAttributes_values {
+  __typename: "AttributeValue";
+  id: string;
+  name: string | null;
+  slug: string | null;
 }
 
 export interface ProductTypeDetails_productType_variantAttributes {
-  __typename: "ProductAttributeCountableConnection";
-  edges: ProductTypeDetails_productType_variantAttributes_edges[];
+  __typename: "Attribute";
+  id: string;
+  name: string | null;
+  slug: string | null;
+  values: (ProductTypeDetails_productType_variantAttributes_values | null)[] | null;
 }
 
 export interface ProductTypeDetails_productType {
@@ -46,8 +42,8 @@ export interface ProductTypeDetails_productType {
   id: string;
   name: string;
   hasVariants: boolean;
-  productAttributes: ProductTypeDetails_productType_productAttributes | null;
-  variantAttributes: ProductTypeDetails_productType_variantAttributes | null;
+  productAttributes: (ProductTypeDetails_productType_productAttributes | null)[] | null;
+  variantAttributes: (ProductTypeDetails_productType_variantAttributes | null)[] | null;
   isShippingRequired: boolean;
   taxRate: TaxRateType | null;
 }
