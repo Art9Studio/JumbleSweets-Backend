@@ -8,6 +8,10 @@ ProductAvailability = namedtuple(
         'available', 'on_sale', 'price_range', 'price_range_undiscounted',
         'discount', 'price_range_local_currency', 'discount_local_currency'))
 
+VariantAvailability = namedtuple(
+    'VariantAvailability', (
+        'available',  'price_discounted', ))
+
 
 def products_with_availability(products, discounts, taxes, local_currency):
     for product in products:
@@ -61,7 +65,7 @@ def get_availability(product, discounts=None, taxes=None, local_currency=None):
         undiscounted_local = to_local_currency(
             undiscounted, local_currency)
         if (undiscounted_local and
-                undiscounted_local.start > price_range_local.start):
+            undiscounted_local.start > price_range_local.start):
             discount_local_currency = (
                 undiscounted_local.start - price_range_local.start)
         else:
@@ -83,3 +87,20 @@ def get_availability(product, discounts=None, taxes=None, local_currency=None):
         discount=discount,
         price_range_local_currency=price_range_local,
         discount_local_currency=discount_local_currency)
+
+
+def get_variant_availability(variant, discounts=None, taxes=None):
+    # In default currency
+    price_discounted = variant.get_price(discounts=discounts, taxes=taxes)
+    # price = variant.base_price()
+    # price = price_discounted
+    # if price > price_discounted:
+    #     discount = price - price_discounted
+    # else:
+    #     discount = None
+
+    is_available = variant.is_in_stock()
+
+    return VariantAvailability(
+        available=is_available,
+        price_discounted=price_discounted, )

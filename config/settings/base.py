@@ -2,6 +2,7 @@ import ast
 import os.path
 
 import environ
+from pathlib import Path
 
 import dj_database_url
 import dj_email_url
@@ -327,7 +328,7 @@ bootstrap4 = {
 TEST_RUNNER = ''
 
 ALLOWED_HOSTS = get_list(
-    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1'))
+    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,0.0.0.0'))
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 

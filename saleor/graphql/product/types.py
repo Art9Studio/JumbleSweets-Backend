@@ -8,7 +8,7 @@ from graphql.error import GraphQLError
 from ...product import models
 from ...product.templatetags.product_images import get_thumbnail
 from ...product.utils import products_with_details
-from ...product.utils.availability import get_availability
+from ...product.utils.availability import get_availability, get_variant_availability
 from ...product.utils.costs import (
     get_margin_for_variant, get_product_costs_data)
 from ..core.decorators import permission_required
@@ -108,10 +108,20 @@ class SelectedAttribute(graphene.ObjectType):
     class Meta:
         description = 'Represents a custom attribute.'
 
+class VariantAvailability(graphene.ObjectType):
+    available = graphene.Boolean()
+    price_discounted = graphene.Field(TaxedMoney)
+
+    class Meta:
+        description = 'Represents availability of a variant in the storefront.'
 
 class ProductVariant(CountableDjangoObjectType):
     stock_quantity = graphene.Int(
         required=True, description='Quantity of a product available for sale.')
+    availability = graphene.Field(
+        VariantAvailability,
+        description="""Informs about variant's availability in the storefront,
+            current price and discounts.""")
     price_override = graphene.Field(
         Money,
         description="""Override the base price of a product if necessary.
@@ -134,6 +144,12 @@ class ProductVariant(CountableDjangoObjectType):
 
     def resolve_stock_quantity(self, info):
         return self.quantity_available
+
+    def resolve_availability(self, info):
+        context = info.context
+        availability = get_variant_availability(
+            self, context.discounts, context.taxes)
+        return VariantAvailability(**availability._asdict())
 
     def resolve_attributes(self, info):
         return resolve_attribute_list(self.attributes)

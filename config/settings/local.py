@@ -27,10 +27,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ODzdplLkQFL4PeCefH5CiOVe6x1jKe
 
 MIDDLEWARE.append(
     'debug_toolbar.middleware.DebugToolbarMiddleware')
-MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 INSTALLED_APPS.append('debug_toolbar')
-INSTALLED_APPS.append('corsheaders')
-CORS_ORIGIN_WHITELIST = ( 'localhost:8080', )
+# MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
+# INSTALLED_APPS.append('corsheaders')
+# CORS_ORIGIN_WHITELIST = ( 'localhost:8080', )
 DEBUG_TOOLBAR_PANELS = [
     # adds a request history to the debug toolbar
     'ddt_request_history.panels.request_history.RequestHistoryPanel',
