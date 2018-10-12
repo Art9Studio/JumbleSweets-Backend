@@ -91,6 +91,7 @@ def get_availability(product, discounts=None, taxes=None, local_currency=None):
 
 def get_variant_availability(variant, discounts=None, taxes=None):
     # In default currency
+    # todo: сделать по красоте
     price_discounted = variant.get_price(discounts=discounts, taxes=taxes)
     # price = variant.base_price()
     # price = price_discounted

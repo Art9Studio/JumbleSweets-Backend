@@ -31,6 +31,7 @@ INSTALLED_APPS.append('debug_toolbar')
 # MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 # INSTALLED_APPS.append('corsheaders')
 # CORS_ORIGIN_WHITELIST = ( 'localhost:8080', )
+
 DEBUG_TOOLBAR_PANELS = [
     # adds a request history to the debug toolbar
     'ddt_request_history.panels.request_history.RequestHistoryPanel',
@@ -50,7 +51,7 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.profiling.ProfilingPanel',
 ]
 DEBUG_TOOLBAR_CONFIG = {
-    'RESULTS_STORE_SIZE': 100}
+    'RESULTS_CACHE_SIZE': 100}
 
 ENABLE_SILK = get_bool_from_env('ENABLE_SILK', False)
 if ENABLE_SILK:
@@ -62,4 +63,3 @@ DATABASES = {
         default=f'postgres://{os.environ.get("POSTGRES_USER")}:{os.environ.get("POSTGRES_PASSWORD")}@{os.environ.get("POSTGRES_DEBUG_HOST")}:{os.environ.get("POSTGRES_PORT")}/{os.environ.get("POSTGRES_DB")}',
         conn_max_age=600)}
 DATABASES['default']['ATOMIC_REQUESTS'] = True
-
