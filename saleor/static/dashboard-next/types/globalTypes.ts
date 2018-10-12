@@ -55,8 +55,21 @@ export enum PaymentStatusEnum {
   WAITING = "WAITING",
 }
 
+export enum PermissionEnum {
+  IMPERSONATE_USERS = "IMPERSONATE_USERS",
+  MANAGE_DISCOUNTS = "MANAGE_DISCOUNTS",
+  MANAGE_MENUS = "MANAGE_MENUS",
+  MANAGE_ORDERS = "MANAGE_ORDERS",
+  MANAGE_PAGES = "MANAGE_PAGES",
+  MANAGE_PRODUCTS = "MANAGE_PRODUCTS",
+  MANAGE_SETTINGS = "MANAGE_SETTINGS",
+  MANAGE_SHIPPING = "MANAGE_SHIPPING",
+  MANAGE_STAFF = "MANAGE_STAFF",
+  MANAGE_USERS = "MANAGE_USERS",
+}
+
 export enum TaxRateType {
-  ACCOMODATION = "ACCOMODATION",
+  ACCOMMODATION = "ACCOMMODATION",
   ADMISSION_TO_CULTURAL_EVENTS = "ADMISSION_TO_CULTURAL_EVENTS",
   ADMISSION_TO_ENTERTAINMENT_EVENTS = "ADMISSION_TO_ENTERTAINMENT_EVENTS",
   ADMISSION_TO_SPORTING_EVENTS = "ADMISSION_TO_SPORTING_EVENTS",
@@ -111,6 +124,10 @@ export interface DraftOrderInput {
   voucher?: string | null;
 }
 
+export interface FulfillmentCancelInput {
+  restock?: boolean | null;
+}
+
 export interface FulfillmentCreateInput {
   trackingNumber?: string | null;
   notifyCustomer?: boolean | null;
@@ -120,6 +137,11 @@ export interface FulfillmentCreateInput {
 export interface FulfillmentLineInput {
   orderLineId?: string | null;
   quantity?: number | null;
+}
+
+export interface FulfillmentUpdateTrackingInput {
+  trackingNumber?: string | null;
+  notifyCustomer?: boolean | null;
 }
 
 export interface OrderAddNoteInput {

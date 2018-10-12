@@ -21,13 +21,13 @@ export interface OrderCapture_orderCapture_order_billingAddress_country {
 
 export interface OrderCapture_orderCapture_order_billingAddress {
   __typename: "Address";
-  id: string;
   city: string;
   cityArea: string;
   companyName: string;
   country: OrderCapture_orderCapture_order_billingAddress_country;
   countryArea: string;
   firstName: string;
+  id: string;
   lastName: string;
   phone: string | null;
   postalCode: string;
@@ -53,17 +53,40 @@ export interface OrderCapture_orderCapture_order_events {
   user: OrderCapture_orderCapture_order_events_user | null;
 }
 
+export interface OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine_unitPrice_gross {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
+
+export interface OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine_unitPrice_net {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
+
+export interface OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine_unitPrice {
+  __typename: "TaxedMoney";
+  gross: OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine_unitPrice_gross;
+  net: OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine_unitPrice_net;
+}
+
 export interface OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine {
   __typename: "OrderLine";
   id: string;
   productName: string;
+  productSku: string;
+  quantity: number;
+  quantityFulfilled: number;
+  unitPrice: OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine_unitPrice | null;
+  thumbnailUrl: string | null;
 }
 
 export interface OrderCapture_orderCapture_order_fulfillments_lines_edges_node {
   __typename: "FulfillmentLine";
   id: string;
-  orderLine: OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine;
   quantity: number;
+  orderLine: OrderCapture_orderCapture_order_fulfillments_lines_edges_node_orderLine;
 }
 
 export interface OrderCapture_orderCapture_order_fulfillments_lines_edges {
@@ -80,6 +103,7 @@ export interface OrderCapture_orderCapture_order_fulfillments {
   __typename: "Fulfillment";
   id: string;
   lines: OrderCapture_orderCapture_order_fulfillments_lines | null;
+  fulfillmentOrder: number;
   status: FulfillmentStatus;
   trackingNumber: string;
 }
@@ -127,13 +151,13 @@ export interface OrderCapture_orderCapture_order_shippingAddress_country {
 
 export interface OrderCapture_orderCapture_order_shippingAddress {
   __typename: "Address";
-  id: string;
   city: string;
   cityArea: string;
   companyName: string;
   country: OrderCapture_orderCapture_order_shippingAddress_country;
   countryArea: string;
   firstName: string;
+  id: string;
   lastName: string;
   phone: string | null;
   postalCode: string;
@@ -204,10 +228,17 @@ export interface OrderCapture_orderCapture_order_user {
   email: string;
 }
 
+export interface OrderCapture_orderCapture_order_availableShippingMethods_price {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
+
 export interface OrderCapture_orderCapture_order_availableShippingMethods {
   __typename: "ShippingMethod";
   id: string;
   name: string;
+  price: OrderCapture_orderCapture_order_availableShippingMethods_price | null;
 }
 
 export interface OrderCapture_orderCapture_order {
@@ -230,6 +261,7 @@ export interface OrderCapture_orderCapture_order {
   totalAuthorized: OrderCapture_orderCapture_order_totalAuthorized | null;
   totalCaptured: OrderCapture_orderCapture_order_totalCaptured | null;
   user: OrderCapture_orderCapture_order_user | null;
+  userEmail: string | null;
   availableShippingMethods: (OrderCapture_orderCapture_order_availableShippingMethods | null)[] | null;
 }
 

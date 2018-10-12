@@ -142,6 +142,11 @@ type AttributeDelete {
 
 scalar AttributeScalar
 
+enum AttributeTypeEnum {
+  PRODUCT
+  VARIANT
+}
+
 type AttributeUpdate {
   errors: [Error]
   attribute: Attribute
@@ -197,8 +202,28 @@ type AttributeValueUpdate {
 }
 
 type AuthorizationKey {
-  name: String!
+  name: AuthorizationKeyType!
   key: String!
+}
+
+type AuthorizationKeyAdd {
+  errors: [Error]
+  authorizationKey: AuthorizationKey
+}
+
+type AuthorizationKeyDelete {
+  errors: [Error]
+  authorizationKey: AuthorizationKey
+}
+
+input AuthorizationKeyInput {
+  key: String
+  password: String
+}
+
+enum AuthorizationKeyType {
+  FACEBOOK
+  GOOGLE_OAUTH2
 }
 
 type Category implements Node {
@@ -511,6 +536,10 @@ input FulfillmentUpdateTrackingInput {
 
 scalar GenericScalar
 
+type Geolocalization {
+  country: CountryDisplay
+}
+
 type HomepageCollectionUpdate {
   errors: [Error]
   shop: Shop
@@ -533,7 +562,7 @@ type Margin {
 type Menu implements Node {
   id: ID!
   name: String!
-  items(before: String, after: String, first: Int, last: Int): MenuItemCountableConnection
+  items: [MenuItem]!
 }
 
 type MenuCountableConnection {
@@ -576,7 +605,7 @@ type MenuItem implements Node {
   collection: Collection
   page: Page
   level: Int!
-  children(before: String, after: String, first: Int, last: Int): MenuItemCountableConnection
+  children: [MenuItem]!
 }
 
 type MenuItemCountableConnection {
@@ -640,6 +669,8 @@ type MoneyRange {
 }
 
 type Mutations {
+  authorizationKeyAdd(input: AuthorizationKeyInput!, keyType: AuthorizationKeyType!): AuthorizationKeyAdd
+  authorizationKeyDelete(keyType: AuthorizationKeyType!): AuthorizationKeyDelete
   assignNavigation(menu: ID, navigationType: NavigationType!): AssignNavigation
   tokenCreate(email: String!, password: String!): CreateToken
   tokenRefresh(token: String): Refresh
@@ -694,7 +725,7 @@ type Mutations {
   pageCreate(input: PageInput!): PageCreate
   pageDelete(id: ID!): PageDelete
   pageUpdate(id: ID!, input: PageInput!): PageUpdate
-  attributeCreate(input: AttributeCreateInput!): AttributeCreate
+  attributeCreate(id: ID!, input: AttributeCreateInput!, type: AttributeTypeEnum!): AttributeCreate
   attributeDelete(id: ID!): AttributeDelete
   attributeUpdate(id: ID!, input: AttributeUpdateInput!): AttributeUpdate
   productCreate(input: ProductCreateInput!): ProductCreate
@@ -985,8 +1016,21 @@ enum PaymentStatusEnum {
 }
 
 type PermissionDisplay {
-  code: String!
+  code: PermissionEnum!
   name: String!
+}
+
+enum PermissionEnum {
+  MANAGE_USERS
+  MANAGE_STAFF
+  IMPERSONATE_USERS
+  MANAGE_DISCOUNTS
+  MANAGE_MENUS
+  MANAGE_ORDERS
+  MANAGE_PAGES
+  MANAGE_PRODUCTS
+  MANAGE_SHIPPING
+  MANAGE_SETTINGS
 }
 
 type Product implements Node {
@@ -1447,6 +1491,7 @@ type ShippingZoneUpdate {
 }
 
 type Shop {
+  geolocalization: Geolocalization
   authorizationKeys: [AuthorizationKey]!
   countries: [CountryDisplay]!
   currencies: [String]!
@@ -1522,7 +1567,7 @@ type StaffUpdate {
 }
 
 enum TaxRateType {
-  ACCOMODATION
+  ACCOMMODATION
   ADMISSION_TO_CULTURAL_EVENTS
   ADMISSION_TO_ENTERTAINMENT_EVENTS
   ADMISSION_TO_SPORTING_EVENTS

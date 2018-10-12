@@ -79,6 +79,7 @@ LANGUAGES = [
     # ('pt-br', _('Portuguese (Brazil)')),
     # ('ro', _('Romanian')),
     ('ru', _('Russian')),
+    # ('ru-ru', _('Russian (Russia)')),
     # ('sk', _('Slovak')),
     # ('tr', _('Turkish')),
     # ('uk', _('Ukrainian')),
@@ -86,7 +87,6 @@ LANGUAGES = [
     # ('zh-hans', _('Chinese')),
     # ('zh-tw', _('Chinese (Taiwan)'))
     ]
-
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, 'locale')]
 USE_I18N = False
 USE_L10N = False
@@ -423,7 +423,7 @@ SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 # CELERY SETTINGS
 CELERY_BROKER_URL = os.environ.get(
     'CELERY_BROKER_URL', os.environ.get('CLOUDAMQP_URL')) or ''
-CELERY_TASK_ALWAYS_EAGER = False if CELERY_BROKER_URL else True
+CELERY_TASK_ALWAYS_EAGER = not CELERY_BROKER_URL
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'

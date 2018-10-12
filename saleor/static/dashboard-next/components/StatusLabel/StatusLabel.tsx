@@ -6,7 +6,7 @@ import * as React from "react";
 
 interface StatusLabelProps {
   className?: string;
-  label: string;
+  label: string | React.ReactNode;
   status: "success" | "neutral" | "error" | string;
   typographyProps?: TypographyProps;
 }
@@ -30,7 +30,7 @@ const decorate = withStyles(theme => {
       "&:before": { backgroundColor: yellow[500], ...dot }
     },
     root: {
-      display: "inline",
+      display: "inline-block",
       marginLeft: theme.spacing.unit + 8,
       position: "relative" as "relative"
     },
