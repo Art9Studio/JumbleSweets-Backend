@@ -57,13 +57,14 @@ class ProductFilterSet(FilterSet):
     class Meta:
         model = Product
         fields = {
-            'category': ['exact'],
+            'category': ['in', 'exact'],
             'price': ['exact', 'range', 'lte', 'gte'],
             'attributes': ['exact'],
             'name': ['exact', 'icontains'],
             'product_type__name': ['exact'],
             'is_published': ['exact'],
-            'available_on': ['isnull']}
+            'available_on': ['isnull']
+        }
 
     @classmethod
     def filter_for_field(cls, f, field_name, lookup_expr='exact'):

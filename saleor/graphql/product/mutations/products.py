@@ -207,6 +207,10 @@ class ProductInput(graphene.InputObjectType):
         description='Publication date. ISO 8601 standard.')
     category = graphene.ID(
         description='ID of the product\'s category.', name='category')
+    categories = graphene.List(
+        graphene.ID,
+        description='List of IDs of categories that the product belongs to.',
+        name='categories')
     charge_taxes = graphene.Boolean(
         description='Determine if taxes are being charged for the product.')
     collections = graphene.List(
