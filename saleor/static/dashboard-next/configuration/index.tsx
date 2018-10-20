@@ -4,7 +4,6 @@ import Navigator from "../components/Navigator";
 import { UserContext } from "../auth";
 import i18n from "../i18n";
 import AccountCircle from "../icons/AccountCircle";
-import Ballot from "../icons/Ballot";
 import Folder from "../icons/Folder";
 import LocalShipping from "../icons/LocalShipping";
 import Monetization from "../icons/Monetization";
@@ -12,6 +11,7 @@ import Navigation from "../icons/Navigation";
 import Pages from "../icons/Pages";
 import StoreMall from "../icons/StoreMall";
 import { productTypeListUrl } from "../productTypes";
+import { siteSettingsUrl } from "../siteSettings";
 import { staffListUrl } from "../staff";
 import { PermissionEnum } from "../types/globalTypes";
 import ConfigurationPage, { MenuItem } from "./ConfigurationPage";
@@ -23,12 +23,6 @@ export const configurationMenu: MenuItem[] = [
     permission: PermissionEnum.MANAGE_PRODUCTS,
     title: i18n.t("Product Types"),
     url: productTypeListUrl
-  },
-  {
-    description: i18n.t("Define attributes of products yousell"),
-    icon: <Ballot fontSize="inherit" />,
-    permission: PermissionEnum.MANAGE_PRODUCTS,
-    title: i18n.t("Attributes")
   },
   {
     description: i18n.t("Manage your employees and their permissions"),
@@ -59,7 +53,8 @@ export const configurationMenu: MenuItem[] = [
     description: i18n.t("View and update your site settings"),
     icon: <StoreMall fontSize="inherit" />,
     permission: PermissionEnum.MANAGE_SETTINGS,
-    title: i18n.t("Site Settings")
+    title: i18n.t("Site Settings"),
+    url: siteSettingsUrl
   },
   {
     description: i18n.t("Manage and add additional pages"),

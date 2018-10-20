@@ -5,6 +5,16 @@
 // START Enums and Input Objects
 //==============================================================
 
+export enum AttributeTypeEnum {
+  PRODUCT = "PRODUCT",
+  VARIANT = "VARIANT",
+}
+
+export enum AuthorizationKeyType {
+  FACEBOOK = "FACEBOOK",
+  GOOGLE_OAUTH2 = "GOOGLE_OAUTH2",
+}
+
 export enum FulfillmentStatus {
   CANCELED = "CANCELED",
   FULFILLED = "FULFILLED",
@@ -95,6 +105,13 @@ export enum TaxRateType {
   WATER = "WATER",
 }
 
+export enum WeightUnitsEnum {
+  g = "g",
+  kg = "kg",
+  lb = "lb",
+  oz = "oz",
+}
+
 export interface AddressInput {
   firstName?: string | null;
   lastName?: string | null;
@@ -109,9 +126,38 @@ export interface AddressInput {
   phone?: string | null;
 }
 
+export interface AttributeCreateInput {
+  name: string;
+  values?: (AttributeValueCreateInput | null)[] | null;
+}
+
+export interface AttributeUpdateInput {
+  name?: string | null;
+  removeValues?: (string | null)[] | null;
+  addValues?: (AttributeValueCreateInput | null)[] | null;
+}
+
+export interface AttributeValueCreateInput {
+  name: string;
+  value?: string | null;
+}
+
 export interface AttributeValueInput {
   slug: string;
   value: string;
+}
+
+export interface AuthorizationKeyInput {
+  key: string;
+  password: string;
+}
+
+export interface CategoryInput {
+  description?: string | null;
+  name?: string | null;
+  parent?: string | null;
+  slug?: string | null;
+  seo?: SeoInput | null;
 }
 
 export interface DraftOrderInput {
@@ -175,6 +221,25 @@ export interface ProductTypeInput {
   isShippingRequired?: boolean | null;
   weight?: any | null;
   taxRate?: TaxRateType | null;
+}
+
+export interface SeoInput {
+  title?: string | null;
+  description?: string | null;
+}
+
+export interface ShopSettingsInput {
+  headerText?: string | null;
+  description?: string | null;
+  includeTaxesInPrices?: boolean | null;
+  displayGrossPrices?: boolean | null;
+  trackInventoryByDefault?: boolean | null;
+  defaultWeightUnit?: WeightUnitsEnum | null;
+}
+
+export interface SiteDomainInput {
+  domain?: string | null;
+  name?: string | null;
 }
 
 export interface StaffCreateInput {
