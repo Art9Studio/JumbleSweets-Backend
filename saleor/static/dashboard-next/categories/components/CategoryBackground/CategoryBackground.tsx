@@ -6,9 +6,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import AddPhotoIcon from "@material-ui/icons/AddAPhoto";
 
-import CategoryBackgroundImage from "./CategoryBackgroundImage";
-
 import CardTitle from "../../../components/CardTitle";
+import ImageTile from "../../../components/ImageTile";
 import i18n from "../../../i18n";
 
 interface CategoryBackgroundProps {
@@ -22,9 +21,9 @@ interface CategoryBackgroundProps {
 
 const decorate = withStyles(theme => ({
   PhotosIcon: {
-    height: "64px",
+    height: 64,
     margin: "0 auto",
-    width: "64px"
+    width: 64
   },
   PhotosIconContainer: {
     margin: `${theme.spacing.unit * 5}px 0`,
@@ -111,9 +110,9 @@ export const CategoryBackground = decorate(
                 <AddPhotoIcon className={classes.PhotosIcon} />
               </div>
             ) : (
-              <CategoryBackgroundImage
+              <ImageTile
+                image={backgroundImage}
                 onImageDelete={onImageDelete}
-                backgroundImage={backgroundImage}
               />
             )}
           </CardContent>

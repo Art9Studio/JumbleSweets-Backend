@@ -39,6 +39,7 @@ function loadStories() {
   require("./stories/categories/CategoryListPage");
 
   // Collections
+  require("./stories/collections/CollectionCreatePage");
   require("./stories/collections/CollectionDetailsPage");
   require("./stories/collections/CollectionListPage");
 
@@ -49,6 +50,9 @@ function loadStories() {
   require("./stories/customers/CustomerDetailsPage");
   require("./stories/customers/CustomerEditPage");
   require("./stories/customers/CustomerListPage");
+
+  // Homepage
+  require("./stories/home/HomePage");
 
   // Staff
   require("./stories/staff/StaffListPage");

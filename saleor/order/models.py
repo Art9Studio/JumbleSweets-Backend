@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib.postgres.fields import JSONField
 from django.core.validators import MinValueValidator
 from django.db import models
-from django.db.models import F, Max, Sum
+from django.db.models import ExpressionWrapper, F, Max, Sum
 from django.urls import reverse
 from django.utils.timezone import now
 from django.utils.translation import pgettext_lazy
@@ -29,17 +29,33 @@ from ..shipping.models import ShippingMethod
 
 class OrderQueryset(models.QuerySet):
     def confirmed(self):
+        """Return non-draft orders."""
         return self.exclude(status=OrderStatus.DRAFT)
 
     def drafts(self):
+        """Return draft orders."""
         return self.filter(status=OrderStatus.DRAFT)
 
-    def to_ship(self):
-        """Fully paid but unfulfilled (or partially fulfilled) orders."""
+    def ready_to_fulfill(self):
+        """Return orders that can be fulfilled.
+
+        Orders ready to fulfill are fully paid but unfulfilled (or partially
+        fulfilled).
+        """
         statuses = {OrderStatus.UNFULFILLED, OrderStatus.PARTIALLY_FULFILLED}
         return self.filter(status__in=statuses).annotate(
             amount_paid=Sum('payments__captured_amount')).filter(
                 total_gross__lte=F('amount_paid'))
+
+    def ready_to_capture(self):
+        """Return orders with payments to capture.
+
+        Orders ready to capture are those which are not draft or canceled and
+        have a preauthorized payment.
+        """
+        qs = self.filter(payments__status=PaymentStatus.PREAUTH)
+        qs = qs.exclude(status={OrderStatus.DRAFT, OrderStatus.CANCELED})
+        return qs.distinct()
 
 
 class Order(models.Model):
@@ -113,11 +129,12 @@ class Order(models.Model):
         return super().save(*args, **kwargs)
 
     def is_fully_paid(self):
+        confirmed_payments = [
+            payment for payment in self.payments.all()
+            if payment.status == PaymentStatus.CONFIRMED]
         total_paid = sum(
-            [
-                payment.get_total() for payment in
-                self.payments.filter(status=PaymentStatus.CONFIRMED)],
-            ZERO_TAXED_MONEY)
+            [payment.get_total()
+             for payment in confirmed_payments], ZERO_TAXED_MONEY)
         return total_paid.gross >= self.total.gross
 
     def get_user_current_email(self):
@@ -196,8 +213,8 @@ class OrderLine(models.Model):
     order = models.ForeignKey(
         Order, related_name='lines', editable=False, on_delete=models.CASCADE)
     variant = models.ForeignKey(
-        'product.ProductVariant', related_name='+', on_delete=models.SET_NULL,
-        blank=True, null=True)
+        'product.ProductVariant', related_name='order_lines',
+        on_delete=models.SET_NULL, blank=True, null=True)
     # max_length is as produced by ProductVariant's display_product method
     product_name = models.CharField(max_length=386)
     translated_product_name = models.CharField(

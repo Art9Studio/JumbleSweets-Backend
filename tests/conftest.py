@@ -25,8 +25,8 @@ from saleor.dashboard.menu.utils import update_menu
 from saleor.dashboard.order.utils import fulfill_order_line
 from saleor.discount.models import Sale, Voucher, VoucherTranslation
 from saleor.menu.models import Menu, MenuItem
-from saleor.order import OrderStatus
-from saleor.order.models import Order
+from saleor.order import OrderStatus, OrderEvents
+from saleor.order.models import Order, OrderEvent
 from saleor.order.utils import recalculate_order
 from saleor.page.models import Page
 from saleor.product.models import (
@@ -201,6 +201,11 @@ def color_attribute(db):  # pylint: disable=W0613
 
 
 @pytest.fixture
+def color_attribute_without_values(db):  # pylint: disable=W0613
+    return Attribute.objects.create(slug='color', name='Color')
+
+
+@pytest.fixture
 def pink_attribute_value(color_attribute):  # pylint: disable=W0613
     value = AttributeValue.objects.create(
         slug='pink', name='Pink', attribute=color_attribute, value='#FF69B4')
@@ -221,6 +226,12 @@ def size_attribute(db):  # pylint: disable=W0613
 def category(db):  # pylint: disable=W0613
     return Category.objects.create(name='Default', slug='default')
 
+
+@pytest.fixture
+def categories_tree(db):
+    parent = Category.objects.create(name='Parent', slug='parent')
+    parent.children.create(name='Child', slug='child')
+    return parent
 
 @pytest.fixture
 def non_default_category(db):  # pylint: disable=W0613
@@ -407,6 +418,12 @@ def order_with_lines(
 
     order.refresh_from_db()
     return order
+
+
+@pytest.fixture()
+def order_events(order):
+    for event_type in OrderEvents:
+        OrderEvent.objects.create(type=event_type.value, order=order)
 
 
 @pytest.fixture()

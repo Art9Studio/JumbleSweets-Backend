@@ -39,5 +39,6 @@ export interface CategoryCreate {
 }
 
 export interface CategoryCreateVariables {
+  parent?: string | null;
   input: CategoryInput;
 }

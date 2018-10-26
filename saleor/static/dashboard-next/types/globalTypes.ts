@@ -155,8 +155,25 @@ export interface AuthorizationKeyInput {
 export interface CategoryInput {
   description?: string | null;
   name?: string | null;
-  parent?: string | null;
   slug?: string | null;
+  seo?: SeoInput | null;
+  backgroundImage?: any | null;
+}
+
+export interface CollectionCreateInput {
+  isPublished?: boolean | null;
+  name?: string | null;
+  slug?: string | null;
+  backgroundImage?: any | null;
+  seo?: SeoInput | null;
+  products?: (string | null)[] | null;
+}
+
+export interface CollectionInput {
+  isPublished?: boolean | null;
+  name?: string | null;
+  slug?: string | null;
+  backgroundImage?: any | null;
   seo?: SeoInput | null;
 }
 

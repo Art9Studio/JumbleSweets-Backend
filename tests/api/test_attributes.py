@@ -273,6 +273,26 @@ def test_update_attribute_remove_and_add_values(
     assert attribute.values.filter(name=attribute_value_name).exists()
 
 
+def test_update_empty_attribute_and_add_values(
+        staff_api_client, color_attribute_without_values,
+        permission_manage_products):
+    query = UPDATE_ATTRIBUTE_QUERY
+    attribute = color_attribute_without_values
+    name = 'Wings name'
+    attribute_value_name = 'Yellow Color'
+    id = graphene.Node.to_global_id('Attribute', attribute.id)
+    variables = {
+        'name': name, 'id': id,
+        'addValues': [{'name': attribute_value_name, 'value': '#1231'}],
+        'removeValues': []}
+    response = staff_api_client.post_graphql(
+        query, variables, permissions=[permission_manage_products])
+    content = get_graphql_content(response)
+    attribute.refresh_from_db()
+    assert attribute.values.count() == 1
+    assert attribute.values.filter(name=attribute_value_name).exists()
+
+
 @pytest.mark.parametrize(
     'name_1, name_2, error_msg', (
         (
@@ -529,36 +549,3 @@ def test_delete_attribute_value(
 ])
 def test_resolve_attribute_value_type(raw_value, expected_type):
     assert resolve_attribute_value_type(raw_value) == expected_type
-
-
-def test_query_attribute_values(
-        color_attribute, pink_attribute_value, user_api_client):
-    attribute_id = graphene.Node.to_global_id(
-        'Attribute', color_attribute.id)
-    query = """
-    query getAttribute($id: ID!) {
-        attributes(id: $id) {
-            edges {
-                node {
-                    id
-                    name
-                    values {
-                        name
-                        type
-                        value
-                    }
-                }
-            }
-        }
-    }
-    """
-    variables = {'id': attribute_id}
-    response = user_api_client.post_graphql(query, variables)
-    content = get_graphql_content(response)
-    data = content['data']['attributes']['edges'][0]['node']
-    values = data['values']
-    pink = [v for v in values if v['name'] == pink_attribute_value.name]
-    assert len(pink) == 1
-    pink = pink[0]
-    assert pink['value'] == '#FF69B4'
-    assert pink['type'] == 'COLOR'
