@@ -168,7 +168,7 @@ class OrderUpdateShipping(BaseMutation):
         description = 'Updates a shipping method of the order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id, input):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -225,7 +225,7 @@ class OrderAddNote(BaseMutation):
         description = 'Adds note to the order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id, input):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -254,7 +254,7 @@ class OrderCancel(BaseMutation):
         description = 'Cancel an order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id, restock):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -285,7 +285,7 @@ class OrderMarkAsPaid(BaseMutation):
         description = 'Mark order as manually paid.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -325,7 +325,7 @@ class OrderCapture(BaseMutation):
         description = 'Capture an order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id, amount):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -353,7 +353,7 @@ class OrderRelease(BaseMutation):
         description = 'Release an order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -383,7 +383,7 @@ class OrderRefund(BaseMutation):
         description = 'Refund an order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id, amount):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)

@@ -18,7 +18,7 @@ def get_results(request, form):
     products = results['products']
     orders = results['orders']
     users = results['users']
-    if not user.has_perm('order.manage_orders'):
+    if not True:  # toDo: поменять права доступа
         orders = orders.none()
     if not user.has_perm('account.manage_users'):
         users = users.none()

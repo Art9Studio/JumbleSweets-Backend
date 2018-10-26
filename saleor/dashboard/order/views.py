@@ -40,9 +40,8 @@ from .utils import (
     create_invoice_pdf, create_packing_slip_pdf, get_statics_absolute_url,
     save_address_in_order)
 
-
-@staff_member_required
-@permission_required('order.manage_orders')
+# @staff_member_required
+# @permission_required('order.manage_orders') toDo: change
 def order_list(request):
     orders = Order.objects.prefetch_related('payments', 'lines', 'user')
     order_filter = OrderFilter(request.GET, queryset=orders)
@@ -57,7 +56,7 @@ def order_list(request):
 
 @require_POST
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_create(request):
     display_gross_prices = request.site.settings.display_gross_prices
     order = Order.objects.create(
@@ -70,7 +69,7 @@ def order_create(request):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def create_order_from_draft(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     status = 200
@@ -100,7 +99,7 @@ def create_order_from_draft(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def remove_draft_order(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     if request.method == 'POST':
@@ -115,7 +114,7 @@ def remove_draft_order(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_details(request, order_pk):
     qs = Order.objects.select_related(
         'user', 'shipping_address', 'billing_address').prefetch_related(
@@ -155,7 +154,7 @@ def order_details(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_add_note(request, order_pk):
     order = get_object_or_404(Order, pk=order_pk)
     form = OrderNoteForm(request.POST or None)
@@ -178,7 +177,7 @@ def order_add_note(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def capture_payment(request, order_pk, payment_pk):
     orders = Order.objects.confirmed().prefetch_related('payments')
     order = get_object_or_404(orders, pk=order_pk)
@@ -205,7 +204,7 @@ def capture_payment(request, order_pk, payment_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def refund_payment(request, order_pk, payment_pk):
     orders = Order.objects.confirmed().prefetch_related('payments')
     order = get_object_or_404(orders, pk=order_pk)
@@ -232,7 +231,7 @@ def refund_payment(request, order_pk, payment_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def release_payment(request, order_pk, payment_pk):
     orders = Order.objects.confirmed().prefetch_related('payments')
     order = get_object_or_404(orders, pk=order_pk)
@@ -253,7 +252,7 @@ def release_payment(request, order_pk, payment_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def orderline_change_quantity(request, order_pk, line_pk):
     orders = Order.objects.drafts().prefetch_related('lines')
     order = get_object_or_404(orders, pk=order_pk)
@@ -280,7 +279,7 @@ def orderline_change_quantity(request, order_pk, line_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def orderline_cancel(request, order_pk, line_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     line = get_object_or_404(order.lines, pk=line_pk)
@@ -303,7 +302,7 @@ def orderline_cancel(request, order_pk, line_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def add_variant_to_order(request, order_pk):
     """Add variant in given quantity to an order."""
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
@@ -338,7 +337,7 @@ def add_variant_to_order(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_address(request, order_pk, address_type):
     order = get_object_or_404(Order, pk=order_pk)
     update_prices = False
@@ -371,7 +370,7 @@ def order_address(request, order_pk, address_type):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_customer_edit(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     form = OrderCustomerForm(request.POST or None, instance=order)
@@ -404,7 +403,7 @@ def order_customer_edit(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_customer_remove(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     form = OrderRemoveCustomerForm(request.POST or None, instance=order)
@@ -420,7 +419,7 @@ def order_customer_remove(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_shipping_edit(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     taxes = get_taxes_for_address(order.shipping_address)
@@ -440,7 +439,7 @@ def order_shipping_edit(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_shipping_remove(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     form = OrderRemoveShippingForm(request.POST or None, instance=order)
@@ -453,7 +452,7 @@ def order_shipping_remove(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_discount_edit(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     form = OrderEditDiscountForm(request.POST or None, instance=order)
@@ -472,7 +471,7 @@ def order_discount_edit(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_voucher_edit(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     form = OrderEditVoucherForm(request.POST or None, instance=order)
@@ -491,7 +490,7 @@ def order_voucher_edit(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def cancel_order(request, order_pk):
     order = get_object_or_404(Order.objects.confirmed(), pk=order_pk)
     status = 200
@@ -519,7 +518,7 @@ def cancel_order(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_voucher_remove(request, order_pk):
     order = get_object_or_404(Order.objects.drafts(), pk=order_pk)
     form = OrderRemoveVoucherForm(request.POST or None, instance=order)
@@ -533,7 +532,7 @@ def order_voucher_remove(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def order_invoice(request, order_pk):
     orders = Order.objects.confirmed().prefetch_related(
         'user', 'shipping_address', 'billing_address', 'voucher')
@@ -547,7 +546,7 @@ def order_invoice(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def mark_order_as_paid(request, order_pk):
     order = get_object_or_404(Order.objects.confirmed(), pk=order_pk)
     status = 200
@@ -572,7 +571,7 @@ def mark_order_as_paid(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def fulfillment_packing_slips(request, order_pk, fulfillment_pk):
     orders = Order.objects.confirmed().prefetch_related(
         'user', 'shipping_address', 'billing_address')
@@ -589,7 +588,7 @@ def fulfillment_packing_slips(request, order_pk, fulfillment_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def fulfill_order_lines(request, order_pk):
     orders = Order.objects.confirmed().prefetch_related('lines')
     order = get_object_or_404(orders, pk=order_pk)
@@ -656,7 +655,7 @@ def fulfill_order_lines(request, order_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def cancel_fulfillment(request, order_pk, fulfillment_pk):
     orders = Order.objects.confirmed().prefetch_related('fulfillments')
     order = get_object_or_404(orders, pk=order_pk)
@@ -689,7 +688,7 @@ def cancel_fulfillment(request, order_pk, fulfillment_pk):
 
 
 @staff_member_required
-@permission_required('order.manage_orders')
+# @permission_required('order.manage_orders') toDo: change
 def change_fulfillment_tracking(request, order_pk, fulfillment_pk):
     orders = Order.objects.confirmed().prefetch_related('fulfillments')
     order = get_object_or_404(orders, pk=order_pk)

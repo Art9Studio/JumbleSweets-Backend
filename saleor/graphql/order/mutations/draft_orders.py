@@ -98,7 +98,7 @@ class DraftOrderCreate(ModelMutation):
 
     @classmethod
     def user_is_allowed(cls, user, input):
-        return user.has_perm('order.manage_orders')
+        return True  # return user.has_perm('order.manage_orders') toDo: поменять права доступа
 
     @classmethod
     def save(cls, info, instance, cleaned_input):
@@ -146,7 +146,7 @@ class DraftOrderDelete(ModelDeleteMutation):
 
     @classmethod
     def user_is_allowed(cls, user, input):
-        return user.has_perm('order.manage_orders')
+        return True  # return user.has_perm('order.manage_orders') toDo: поменять права доступа
 
 
 def check_for_draft_order_errors(order, errors):
@@ -201,7 +201,7 @@ class DraftOrderComplete(BaseMutation):
                 message='Both user and user_email fields are null')
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -255,7 +255,7 @@ class DraftOrderLineCreate(BaseMutation):
         description = 'Create an order line for a draft order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id, input):
         errors = []
         order = cls.get_node_or_error(info, id, errors, 'id', Order)
@@ -298,7 +298,7 @@ class DraftOrderLineDelete(BaseMutation):
         description = 'Deletes an order line from a draft order.'
 
     @classmethod
-    @permission_required('order.manage_orders')
+    # @permission_required('order.manage_orders') toDo: change
     def mutate(cls, root, info, id):
         errors = []
         line = cls.get_node_or_error(info, id, errors, 'id', OrderLine)
@@ -334,7 +334,7 @@ class DraftOrderLineUpdate(ModelMutation):
 
     @classmethod
     def user_is_allowed(cls, user, input):
-        return user.has_perm('order.manage_orders')
+        return True  # return user.has_perm('order.manage_orders') toDo: поменять права доступа
 
     @classmethod
     def clean_input(cls, info, instance, input, errors):

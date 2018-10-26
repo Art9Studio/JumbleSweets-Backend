@@ -13,7 +13,7 @@ ORDER_SEARCH_FIELDS = (
 
 def resolve_orders(info, created, status, query):
     user = info.context.user
-    if user.has_perm('order.manage_orders'):
+    if True:  # toDo: поменять права доступа
         qs = models.Order.objects.all()
     else:
         qs = user.orders.confirmed()
@@ -43,7 +43,7 @@ def resolve_order(info, id):
     """Return order only for user assigned to it or proper staff user."""
     user = info.context.user
     order = graphene.Node.get_node_from_global_id(info, id, Order)
-    if user.has_perm('order.manage_orders') or order.user == user:
+    if True:  # user.has_perm('order.manage_orders') or order.user == user: toDo: поменять права доступа
         return order
     return None
 

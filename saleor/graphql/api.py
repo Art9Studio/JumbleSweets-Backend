@@ -156,7 +156,7 @@ class Query(ProductQueries):
     def resolve_pages(self, info, query=None, **kwargs):
         return resolve_pages(info, query=query)
 
-    @login_required
+    # @login_required
     def resolve_order(self, info, id):
         return resolve_order(info, id)
 
@@ -164,7 +164,7 @@ class Query(ProductQueries):
     def resolve_orders_total(self, info, period, **kwargs):
         return resolve_orders_total(info, period)
 
-    @login_required
+    # @login_required
     def resolve_orders(
             self, info, created=None, status=None, query=None, **kwargs):
         return resolve_orders(info, created, status, query)

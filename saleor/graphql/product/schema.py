@@ -1,9 +1,6 @@
 import graphene
 from graphql_jwt.decorators import permission_required
 
-from ..descriptions import DESCRIPTIONS
-from ..core.fields import PrefetchingConnectionField
-from ..core.types import ReportingPeriod
 from .mutations.attributes import (
     AttributeValueCreate, AttributeValueDelete,
     AttributeValueUpdate, AttributeCreate, AttributeDelete,
@@ -25,6 +22,9 @@ from .scalars import AttributeScalar
 from .types import (
     Category, Collection, Product, Attribute, ProductType, ProductVariant,
     StockAvailability)
+from ..core.fields import PrefetchingConnectionField
+from ..core.types import ReportingPeriod
+from ..descriptions import DESCRIPTIONS
 
 
 class ProductQueries(graphene.ObjectType):
@@ -59,6 +59,7 @@ class ProductQueries(graphene.ObjectType):
             graphene.ID, description='Filter products by category.'),
         collections=graphene.List(
             graphene.ID, description='Filter products by collections.'),
+        has_available_on=graphene.Boolean(description='Filter products by having available_on field'),
         price_lte=graphene.Float(
             description='Filter by price less than or equal to the given value.'),
         price_gte=graphene.Float(

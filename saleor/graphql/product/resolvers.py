@@ -55,7 +55,7 @@ def resolve_collections(info, query):
 
 
 def resolve_products(
-        info, attributes=None, categories=None, collections=None,
+        info, attributes=None, categories=None, collections=None, has_available_on=None,
         price_lte=None, price_gte=None, sort_by=None, stock_availability=None,
         query=None, **kwargs):
 
@@ -73,6 +73,9 @@ def resolve_products(
     if collections:
         collections = get_nodes(collections, Collection)
         qs = filter_products_by_collections(qs, collections)
+
+    if has_available_on:
+        qs = qs.filter(available_on__isnull=not has_available_on)
 
     if stock_availability:
         qs = qs.annotate(total_quantity=Sum('variants__quantity'))
