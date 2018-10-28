@@ -1,6 +1,6 @@
 import graphene
 import graphene_django_optimizer as gql_optimizer
-from django.db.models import Sum, Q
+from django.db.models import Sum, Q, Count
 
 from ...order import OrderStatus
 from ...product import models
@@ -39,11 +39,15 @@ def resolve_attributes(info, category_id, query):
     return gql_optimizer.query(qs, info)
 
 
-def resolve_categories(info, query, level=None):
+def resolve_categories(info, query, level=None, sort_by=None):
     qs = models.Category.objects.prefetch_related('children')
+    if sort_by == 'productsCount' or sort_by == '-productsCount':
+        qs = qs.annotate(productsCount=Count('products'))
     if level is not None:
         qs = qs.filter(level=level)
     qs = filter_by_query_param(qs, query, CATEGORY_SEARCH_FIELDS)
+    qs = sort_qs(qs, sort_by)
+    qs = qs.distinct()
     return gql_optimizer.query(qs, info)
 
 

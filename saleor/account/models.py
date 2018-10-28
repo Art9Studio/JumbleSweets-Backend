@@ -11,6 +11,7 @@ from django.utils.translation import pgettext_lazy
 from django_countries.fields import Country, CountryField
 from phonenumber_field.modelfields import PhoneNumber, PhoneNumberField
 
+# from ..product.models import Product
 from .validators import validate_possible_number
 
 
@@ -75,8 +76,8 @@ class Address(models.Model):
 class UserManager(BaseUserManager):
 
     def create_user(
-            self, email, password=None, is_staff=False, is_active=True,
-            **extra_fields):
+        self, email, password=None, is_staff=False, is_active=True,
+        **extra_fields):
         """Create a user instance with the given email and password."""
         email = UserManager.normalize_email(email)
         # Google OAuth2 backend send unnecessary username field
@@ -114,6 +115,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     token = models.UUIDField(default=get_token, editable=False, unique=True)
     is_active = models.BooleanField(default=True)
     note = models.TextField(null=True, blank=True)
+    favourites = models.ManyToManyField('product.Product', blank=True, related_name='user_favourites')
     date_joined = models.DateTimeField(default=timezone.now, editable=False)
     default_shipping_address = models.ForeignKey(
         Address, related_name='+', null=True, blank=True,
@@ -164,4 +166,4 @@ class CustomerNote(models.Model):
         on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ('date', )
+        ordering = ('date',)

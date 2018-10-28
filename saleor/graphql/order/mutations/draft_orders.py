@@ -215,6 +215,7 @@ class DraftOrderComplete(BaseMutation):
             order.shipping_method_name = None
             order.shipping_price = ZERO_TAXED_MONEY
             if order.shipping_address:
+                # тут ошибка (скорее наша), я скоро приду
                 order.shipping_address.delete()
         order.save()
         oversold_items = []

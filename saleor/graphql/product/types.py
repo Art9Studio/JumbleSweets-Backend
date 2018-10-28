@@ -6,19 +6,19 @@ from django.db.models import Prefetch
 from graphene import relay
 from graphql.error import GraphQLError
 
-from ...product import models
-from ...product.templatetags.product_images import get_thumbnail
-from ...product.utils import calculate_revenue_for_variant
-from ...product.utils.availability import get_availability, get_variant_availability
-from ...product.utils.costs import (
-    get_margin_for_variant, get_product_costs_data)
+from .descriptions import AttributeDescriptions, AttributeValueDescriptions
 from ..core.decorators import permission_required
 from ..core.fields import PrefetchingConnectionField
 from ..core.types import (
     CountableDjangoObjectType, Money, MoneyRange, ReportingPeriod, TaxedMoney,
     TaxedMoneyRange, TaxRateType)
 from ..utils import get_database_id, reporting_period_to_date
-from .descriptions import AttributeDescriptions, AttributeValueDescriptions
+from ...product import models
+from ...product.templatetags.product_images import get_thumbnail
+from ...product.utils import calculate_revenue_for_variant
+from ...product.utils.availability import get_availability, get_variant_availability
+from ...product.utils.costs import (
+    get_margin_for_variant, get_product_costs_data)
 
 COLOR_PATTERN = r'^(#[0-9a-fA-F]{3}|#(?:[0-9a-fA-F]{2}){2,4}|(rgb|hsl)a?\((-?\d+%?[,\s]+){2,3}\s*[\d\.]+%?\))$'  # noqa
 color_pattern = re.compile(COLOR_PATTERN)
@@ -123,12 +123,14 @@ class SelectedAttribute(graphene.ObjectType):
     class Meta:
         description = 'Represents a custom attribute.'
 
+
 class VariantAvailability(graphene.ObjectType):
     available = graphene.Boolean()
     price_discounted = graphene.Field(TaxedMoney)
 
     class Meta:
         description = 'Represents availability of a variant in the storefront.'
+
 
 class ProductVariant(CountableDjangoObjectType):
     stock_quantity = graphene.Int(
@@ -235,6 +237,7 @@ class Product(CountableDjangoObjectType):
     thumbnail_url = graphene.String(
         description='The URL of a main thumbnail for a product.',
         size=graphene.Argument(graphene.Int, description='Size of thumbnail'))
+    favourite = graphene.Boolean(description='Indicates if product is favourite for current user')
     availability = graphene.Field(
         ProductAvailability,
         description="""Informs about product's availability in the storefront,
@@ -298,6 +301,12 @@ class Product(CountableDjangoObjectType):
     def resolve_margin(self, info):
         _, margin = get_product_costs_data(self)
         return Margin(margin[0], margin[1])
+
+    # toDo подумать об оптимизации
+    def resolve_favourite(self, info):
+        if info.context.user.is_authenticated:
+            return info.context.user.favourites.filter(id=self.id).exists()
+        return False
 
     def resolve_image_by_id(self, info, id):
         pk = get_database_id(info, id, ProductImage)

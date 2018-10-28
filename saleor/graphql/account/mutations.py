@@ -7,6 +7,7 @@ from django.utils.http import urlsafe_base64_encode
 from graphql_jwt.decorators import permission_required
 from graphql_jwt.exceptions import PermissionDenied
 
+from saleor.graphql.product.types import Product
 from ...account import emails, models
 from ...core.permissions import MODELS_PERMISSIONS, get_permissions
 from ...dashboard.staff.utils import remove_staff_member
@@ -28,6 +29,8 @@ def send_user_password_reset_email(user, site):
 
 BILLING_ADDRESS_FIELD = 'default_billing_address'
 SHIPPING_ADDRESS_FIELD = 'default_shipping_address'
+ADDED_FAVOURITES_FIELD = 'added_favourites'
+REMOVED_FAVOURITES_FIELD = 'removed_favourites'
 
 
 class CustomerRegisterInput(graphene.InputObjectType):
@@ -59,6 +62,14 @@ class UserInput(graphene.InputObjectType):
     is_active = graphene.Boolean(
         required=False, description='User account is active.')
     note = graphene.String(description='A note about the user.')
+    added_favourites = graphene.List(
+        graphene.ID,
+        description='List of products to be added to the favourites.',
+        name='addedFavourites')
+    removed_favourites = graphene.List(
+        graphene.ID,
+        description='List of products to be removed from the favourites.',
+        name='removedFavourites')
 
 
 class CustomerInput(UserInput):
@@ -118,7 +129,19 @@ class CustomerCreate(ModelMutation):
     def clean_input(cls, info, instance, input, errors):
         shipping_address_input = input.pop(SHIPPING_ADDRESS_FIELD, None)
         billing_address_input = input.pop(BILLING_ADDRESS_FIELD, None)
+        added_favourites = input.pop(ADDED_FAVOURITES_FIELD, None)
+        removed_favourites = input.pop(REMOVED_FAVOURITES_FIELD, None)
         cleaned_input = super().clean_input(info, instance, input, errors)
+
+        if added_favourites:
+            added_favourites = cls.get_nodes_or_error(
+                added_favourites, errors, 'products', only_type=Product)
+            cleaned_input[ADDED_FAVOURITES_FIELD] = added_favourites
+
+        if removed_favourites:
+            removed_favourites = cls.get_nodes_or_error(
+                removed_favourites, errors, 'products', only_type=Product)
+            cleaned_input[REMOVED_FAVOURITES_FIELD] = removed_favourites
 
         if shipping_address_input:
             shipping_address = cls.construct_address(
@@ -134,6 +157,13 @@ class CustomerCreate(ModelMutation):
 
     @classmethod
     def save(cls, info, instance, cleaned_input):
+        added_favourites = cleaned_input.get(ADDED_FAVOURITES_FIELD)
+        if added_favourites:
+            instance.favourites.add(*added_favourites)
+
+        removed_favourites = cleaned_input.get(REMOVED_FAVOURITES_FIELD)
+        if removed_favourites:
+            instance.favourites.remove(*removed_favourites)
         default_shipping_address = cleaned_input.get(SHIPPING_ADDRESS_FIELD)
         if default_shipping_address:
             default_shipping_address.save()

@@ -37,6 +37,7 @@ class ProductQueries(graphene.ObjectType):
         Category, query=graphene.String(
             description=DESCRIPTIONS['category']),
         level=graphene.Argument(graphene.Int),
+        sort_by=graphene.String(description='Sort categories.'),
         description='List of the shop\'s categories.')
     category = graphene.Field(
         Category, id=graphene.Argument(graphene.ID, required=True),
@@ -93,8 +94,8 @@ class ProductQueries(graphene.ObjectType):
     def resolve_category(self, info, id):
         return graphene.Node.get_node_from_global_id(info, id, Category)
 
-    def resolve_categories(self, info, level=None, query=None, **kwargs):
-        return resolve_categories(info, level=level, query=query)
+    def resolve_categories(self, info, level=None, query=None, sort_by=None, **kwargs):
+        return resolve_categories(info, level=level, query=query, sort_by=sort_by)
 
     def resolve_collection(self, info, id):
         return graphene.Node.get_node_from_global_id(info, id, Collection)
