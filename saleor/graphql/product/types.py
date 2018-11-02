@@ -307,6 +307,7 @@ class Product(CountableDjangoObjectType):
 
     # toDo подумать об оптимизации
     def resolve_favourite(self, info):
+
         if info.context.user.is_authenticated:
             return info.context.user.favourites.filter(id=self.id).exists()
         return False
