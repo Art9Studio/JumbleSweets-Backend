@@ -52,7 +52,7 @@ MANAGERS = ADMINS
 
 INTERNAL_IPS = get_list(os.environ.get('INTERNAL_IPS', '127.0.0.1'))
 
-# Some cloud providers like Heroku export REDIS_URL variable instead of CACHE_URL
+# Some cloud providers (Heroku) export REDIS_URL variable instead of CACHE_URL
 REDIS_URL = os.environ.get('REDIS_URL')
 if REDIS_URL:
     CACHE_URL = os.environ.setdefault('CACHE_URL', REDIS_URL)
@@ -189,7 +189,6 @@ THIRD_PARTY_APPS = [
     'django_prices_vatlayer',
     'graphene_django',
     'mptt',
-    'payments',
     'webpack_loader',
     'social_django',
     'django_countries',
@@ -265,6 +264,7 @@ LOGIN_URL = '/account/login/'
 DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'UA')
 DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'UAH')
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
+DEFAULT_MAX_DIGITS = 12
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
 COUNTRIES_OVERRIDE = {
     # 'EU': pgettext_lazy(
@@ -296,18 +296,12 @@ PAYMENT_HOST = get_host
 
 PAYMENT_MODEL = 'order.Payment'
 
-PAYMENT_VARIANTS = {
-    'default': ('payments.dummy.DummyProvider', {})}
-
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 # Do not use cached session if locmem cache backend is used but fallback to use
 # default django.contrib.sessions.backends.db instead
 if not CACHES['default']['BACKEND'].endswith('LocMemCache'):
     SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
-
-CHECKOUT_PAYMENT_CHOICES = [
-    ('default', 'Dummy provider')]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'}
@@ -483,3 +477,25 @@ if SENTRY_DSN:
 
 SERIALIZATION_MODULES = {
     'json': 'saleor.core.utils.json_serializer'}
+
+
+DUMMY = 'dummy'
+BRAINTREE = 'braintree'
+CHECKOUT_PAYMENT_GATEWAYS = {
+    DUMMY: pgettext_lazy('Payment method name', 'Dummy gateway')
+}
+
+PAYMENT_GATEWAYS = {
+    DUMMY: {
+        'module': 'saleor.payment.gateways.dummy',
+        'connection_params': {}},
+    BRAINTREE: {
+        'module': 'saleor.payment.gateways.braintree',
+        'connection_params': {
+            'sandbox_mode': get_bool_from_env('BRAINTREE_SANDBOX_MODE', True),
+            'merchant_id': os.environ.get('BRAINTREE_MERCHANT_ID'),
+            'public_key': os.environ.get('BRAINTREE_PUBLIC_KEY'),
+            'private_key': os.environ.get('BRAINTREE_PRIVATE_KEY')
+        }
+    }
+}

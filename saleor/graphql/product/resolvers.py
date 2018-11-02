@@ -35,6 +35,7 @@ def resolve_attributes(info, category_id, query):
         qs = qs.filter(
             Q(product_type__in=product_types)
             | Q(product_variant_type__in=product_types))
+    qs = qs.order_by('name')
     qs = qs.distinct()
     return gql_optimizer.query(qs, info)
 
@@ -55,6 +56,7 @@ def resolve_collections(info, query):
     user = info.context.user
     qs = models.Collection.objects.visible_to_user(user)
     qs = filter_by_query_param(qs, query, COLLECTION_SEARCH_FIELDS)
+    qs = qs.order_by('name')
     return gql_optimizer.query(qs, info)
 
 
@@ -96,6 +98,7 @@ def resolve_products(
 
 def resolve_product_types(info):
     qs = models.ProductType.objects.all()
+    qs = qs.order_by('name')
     return gql_optimizer.query(qs, info)
 
 
