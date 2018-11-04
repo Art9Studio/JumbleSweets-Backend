@@ -59,7 +59,7 @@ RUN \
 ADD . /app
 COPY --from=build-python /usr/local/lib/python3.7/site-packages/ /usr/local/lib/python3.7/site-packages/
 COPY --from=build-python /usr/local/bin/ /usr/local/bin/
-COPY --from=build-python /app/.env /app
+# COPY --from=build-python /app/.env /app
 COPY --from=build-nodejs /app/saleor/static /app/saleor/static
 COPY --from=build-nodejs /app/webpack-bundle.json /app/
 COPY --from=build-nodejs /app/templates /app/templates
