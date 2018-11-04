@@ -78,6 +78,8 @@ RUN useradd --system saleor && \
     mkdir -p /app/media /app/static && \
     chown -R saleor:saleor /app/
 
+RUN rm -R common.env .env .envs
+
 USER saleor
 
 

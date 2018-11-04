@@ -13,14 +13,14 @@ services:
       - saleor-backend-tier
     ports:
       - 8000:8000
-    env_file: common.env
+    env_file: .env
     depends_on:
-      - db
+      - postgres
       - redis
       - search
-    # command: python manage.py runserver 0.0.0.0:8000
+    command: uwsgi /app/saleor/wsgi/uwsgi.ini
 
-  db:
+  postgres:
     image: library/postgres:latest
     restart: unless-stopped
     networks:
@@ -43,21 +43,21 @@ services:
     ports:
       - 6379:6379
 
-  celery:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-      args:
-        STATIC_URL: '/static/'
-    command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
-    restart: unless-stopped
-    networks:
-      - saleor-backend-tier
-    volumes:
-      - .:/app:Z
-    env_file: common.env
-    depends_on:
-      - redis
+  # celery:
+  #   # build:
+  #   #   context: .
+  #   #   dockerfile: ./Dockerfile
+  #   #   args:
+  #   #     STATIC_URL: '/static/'
+  #   command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
+  #   restart: unless-stopped
+  #   networks:
+  #     - saleor-backend-tier
+  #   volumes:
+  #     - .:/app:Z
+  #   env_file: .env
+  #   depends_on:
+  #     - redis
 
   search:
     image: elasticsearch:6.4.2
