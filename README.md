@@ -31,8 +31,8 @@
   <a href="https://travis-ci.org/mirumee/saleor">
     <img src="https://travis-ci.org/mirumee/saleor.svg?branch=master" alt="Build status" />
   </a>
-  <a href="http://codecov.io/github/mirumee/saleor?branch=master">
-    <img src="http://codecov.io/github/mirumee/saleor/coverage.svg?branch=master" alt="Codecov" />
+  <a href="http://codecov.io/github/Art9Studio/JumbleSweets-Backend?branch=master">
+    <img src="http://codecov.io/github/Art9Studio/JumbleSweets-Backend/coverage.svg?branch=master" alt="Codecov" />
   </a>
   <a href='https://docs.getsaleor.com/en/latest/?badge=latest'>
     <img src='https://readthedocs.org/projects/saleor/badge/?version=latest' alt='Documentation Status' />
