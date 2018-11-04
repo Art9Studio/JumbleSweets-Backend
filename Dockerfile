@@ -13,14 +13,14 @@ RUN pip install pipenv
 ADD Pipfile /app/
 ADD Pipfile.lock /app/
 
-ADD ./.envs/.production /app/.envs/.production
-ADD merge_production_dotenvs_in_dotenv.py /app/
+# ADD ./.envs/.production /app/.envs/.production
+# ADD merge_production_dotenvs_in_dotenv.py /app/
 
 WORKDIR /app
 
 RUN pipenv install --system --deploy --dev
 RUN python -m pip install django-redis
-RUN python3 merge_production_dotenvs_in_dotenv.py
+# RUN python3 merge_production_dotenvs_in_dotenv.py
 
 
 
