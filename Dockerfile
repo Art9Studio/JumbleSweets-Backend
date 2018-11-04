@@ -12,8 +12,16 @@ RUN \
 RUN pip install pipenv
 ADD Pipfile /app/
 ADD Pipfile.lock /app/
+
+ADD ./.envs/.production /app/.envs/.production
+ADD merge_production_dotenvs_in_dotenv.py /app/
+
 WORKDIR /app
+
 RUN pipenv install --system --deploy --dev
+RUN python3 merge_production_dotenvs_in_dotenv.py
+
+
 
 ### Build static assets
 FROM node:10 as build-nodejs
@@ -50,12 +58,16 @@ RUN \
 ADD . /app
 COPY --from=build-python /usr/local/lib/python3.7/site-packages/ /usr/local/lib/python3.7/site-packages/
 COPY --from=build-python /usr/local/bin/ /usr/local/bin/
+COPY --from=build-python /app/.env /app
 COPY --from=build-nodejs /app/saleor/static /app/saleor/static
 COPY --from=build-nodejs /app/webpack-bundle.json /app/
 COPY --from=build-nodejs /app/templates /app/templates
 WORKDIR /app
 
 
+# RUN SECRET_KEY=${SECRET_KEY} \
+#     STATIC_URL=${STATIC_URL} \
+#     python3 manage.py collectstatic --no-input
 RUN SECRET_KEY=dummy \
     STATIC_URL=${STATIC_URL} \
     python3 manage.py collectstatic --no-input

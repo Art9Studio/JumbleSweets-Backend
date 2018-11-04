@@ -23,12 +23,12 @@ jobs:
           command: |
             docker build \
               --build-arg STATIC_URL=$STATIC_URL \
-              -t mirumee/saleor:latest .
+              -t art9studio/jumblesweets.backend:latest .
       - run:
           name: Run tests
           command: |
             docker run -d --name db -e POSTGRES_USER=saleor -e POSTGRES_PASSWORD=saleor postgres:9.6-alpine
-            docker run --network container:db --rm -e DATABASE_URL -e SECRET_KEY mirumee/saleor:latest pytest
+            docker run --network container:db --rm -e DATABASE_URL -e SECRET_KEY art9studio/jumblesweets.backend:latest pytest
           environment:
             DATABASE_URL: postgres://saleor:saleor@localhost:5432/saleor
             SECRET_KEY: irrelevant
@@ -36,9 +36,9 @@ jobs:
           name: Push Docker image
           command: |
             docker login -u $DOCKERCLOUD_USER -p $DOCKERCLOUD_PASS
-            docker tag mirumee/saleor:latest mirumee/saleor:$CIRCLE_SHA1
-            docker push mirumee/saleor:$CIRCLE_SHA1
-            docker push mirumee/saleor:latest
+            docker tag art9studio/jumblesweets.backend:latest art9studio/jumblesweets.backend:$CIRCLE_SHA1
+            docker push art9studio/jumblesweets.backend:$CIRCLE_SHA1
+            docker push art9studio/jumblesweets.backend:latest
 
       - run:
           name: Deploy saleor-demo
@@ -66,6 +66,4 @@ workflows:
         - build:
             filters:
               branches:
-                only: master
-              tags:
-                only: /demo.*/
+                only: deploy

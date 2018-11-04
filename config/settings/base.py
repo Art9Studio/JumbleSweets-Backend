@@ -30,14 +30,18 @@ def get_bool_from_env(name, default_value):
                 '{} is an invalid value for {}'.format(value, name)) from e
     return default_value
 
+# (jumblesweets/config/settings/base.py - 3 = jumblesweets/)
+PROJECT_ROOT = environ.Path(__file__) - 3
 
-PROJECT_ROOT = environ.Path(__file__) - 3  # (jumblesweets/config/settings/base.py - 3 = jumblesweets/)
 ROOT_DIR = PROJECT_ROOT
 
 load_dotenv(str(ROOT_DIR.path('.env')))
 
 SITE_ID = 1
 DEBUG = get_bool_from_env('DEBUG', True)
+
+SECRET_KEY = os.environ.get('SECRET_KEY',
+                'ODzdplLkQFL4PeCefH5CiOVe6x1jKeq9u3F4nWWmHuywkLxfQHHFUZa61i7Ew5DB')
 
 APPS_DIR = ROOT_DIR.path('saleor')
 

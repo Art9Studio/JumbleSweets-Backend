@@ -1,31 +1,29 @@
 from .base import *  # noqa
-# from .base import env
 
+# from .base import env
+ENABLE_SILK = False
 ENABLE_SSL = get_bool_from_env('ENABLE_SSL', False)
 
 if ENABLE_SSL:
-    SECURE_SSL_REDIRECT = not DEBUG
+    SECURE_SSL_REDIRECT = True
 
 loaders = [
     'django.template.loaders.cached.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader']
 
-
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [os.path.join(PROJECT_ROOT, 'templates')],
     'OPTIONS': {
-        'debug': DEBUG,
+        'debug': False,
         'context_processors': context_processors,
         'loaders': loaders,
         'string_if_invalid': ''}}]
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://saleor:saleor@localhost:5432/saleor',
+        default=f'postgres://{os.environ.get("POSTGRES_USER")}:{os.environ.get("POSTGRES_PASSWORD")}@{os.environ.get("POSTGRES_HOST")}:{os.environ.get("POSTGRES_PORT")}/{os.environ.get("POSTGRES_DB")}',
         conn_max_age=600)}
 
 REDIS_URL = os.environ.get('REDIS_URL')
@@ -45,4 +43,3 @@ if ES_URL:
     ELASTICSEARCH_DSL = {
         'default': {
             'hosts': ES_URL}}
-

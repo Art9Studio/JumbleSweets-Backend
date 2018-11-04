@@ -23,8 +23,6 @@ TEMPLATES = [{
         'loaders': loaders,
         'string_if_invalid': '<< MISSING VARIABLE "%s" >>'}}]
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ODzdplLkQFL4PeCefH5CiOVe6x1jKeq9u3F4nWWmHuywkLxfQHHFUZa61i7Ew5DB')
-
 MIDDLEWARE.append(
     'debug_toolbar.middleware.DebugToolbarMiddleware')
 INSTALLED_APPS.append('debug_toolbar')
