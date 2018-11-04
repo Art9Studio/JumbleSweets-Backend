@@ -2,11 +2,12 @@ version: '2.4'
 
 services:
   web:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-      args:
-        STATIC_URL: '/static/'
+    # build:
+    #   context: .
+    #   dockerfile: ./Dockerfile
+    #   args:
+    #     STATIC_URL: '/static/'
+    image: art9studio/jumblesweets.backend
     restart: unless-stopped
     networks:
       - saleor-backend-tier

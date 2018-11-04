@@ -343,6 +343,7 @@ saleor/media/
 !.github
 !.gitignore
 !.nvmrc
+!.npmrc
 !.pylintrc
 !.travis*
 !.tx
