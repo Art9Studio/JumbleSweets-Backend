@@ -34,8 +34,9 @@ def get_bool_from_env(name, default_value):
 PROJECT_ROOT = environ.Path(__file__) - 3
 
 ROOT_DIR = PROJECT_ROOT
-
-load_dotenv(str(ROOT_DIR.path('.env')))
+DJANGO_READ_DOT_ENV_FILE = get_bool_from_env('DJANGO_READ_DOT_ENV_FILE', True)
+if DJANGO_READ_DOT_ENV_FILE:
+    load_dotenv(str(ROOT_DIR.path('.env')))
 
 SITE_ID = 1
 DEBUG = get_bool_from_env('DEBUG', True)
