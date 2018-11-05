@@ -18,10 +18,10 @@ services:
       - postgres
       - redis
       - search
-    command: uwsgi /app/saleor/wsgi/uwsgi.ini
+    # command: uwsgi /app/saleor/wsgi/uwsgi.ini
 
   postgres:
-    image: library/postgres:latest
+    image: library/postgres:10.5
     restart: unless-stopped
     networks:
       - saleor-backend-tier
@@ -29,9 +29,7 @@ services:
       - saleor-db:/var/lib/postgresql
     ports:
       - 5432:5432
-    environment:
-      - POSTGRES_USER=saleor
-      - POSTGRES_PASSWORD=saleor
+
 
   redis:
     image: library/redis:latest
@@ -42,6 +40,7 @@ services:
       - saleor-redis:/data
     ports:
       - 6379:6379
+    # command: redis-server --requirepass
 
   # celery:
   #   # build:
@@ -66,12 +65,26 @@ services:
       - saleor-backend-tier
     volumes:
       - saleor-search:/usr/share/elasticsearch/
-    ports:
-      - 9200:9200
+    # ports:
+    #   - 9200:9200
     # See https://github.com/docker/compose/issues/4513 if updating to version '3'
-    mem_limit: 512m
+    mem_limit: 256m
     environment:
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m -Dlog4j2.disable.jmx=true"
+      - "ES_JAVA_OPTS=-Xms256m -Xmx256m -Dlog4j2.disable.jmx=true"
+
+  caddy:
+    image: abiosoft/caddy:0.11.0
+    volumes:
+      - jumble-caddy:/root/.caddy
+      - ./Caddyfile:/etc/Caddyfile
+    networks:
+      - saleor-backend-tier
+    env_file:
+      - ./.env
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
+    restart: unless-stopped
 
 volumes:
   saleor-db:
@@ -79,6 +92,8 @@ volumes:
   saleor-redis:
     driver: local
   saleor-search:
+    driver: local
+  jumble-caddy:
     driver: local
 
 networks:

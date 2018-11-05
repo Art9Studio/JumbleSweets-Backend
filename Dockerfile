@@ -85,5 +85,5 @@ EXPOSE 8000
 ENV PORT 8000
 
 ENV PYTHONUNBUFFERED 1
-ENV PROCESSES 4
-# CMD ["uwsgi", "/app/saleor/wsgi/uwsgi.ini"]
+ENV PROCESSES 3
+CMD ["uwsgi", "/app/saleor/wsgi/uwsgi.ini"]
