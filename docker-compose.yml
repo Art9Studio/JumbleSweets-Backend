@@ -7,7 +7,7 @@ services:
     #   dockerfile: ./Dockerfile
     #   args:
     #     STATIC_URL: '/static/'
-    image: art9studio/jumblesweets.backend
+    image: art9studio/jumblesweets.backend:latest
     restart: unless-stopped
     networks:
       - saleor-backend-tier
