@@ -7,10 +7,9 @@ ENABLE_SSL = get_bool_from_env('ENABLE_SSL', False)
 if ENABLE_SSL:
     SECURE_SSL_REDIRECT = True
 
-loaders = [
-    'django.template.loaders.cached.Loader',
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader']
+loaders = [('django.template.loaders.cached.Loader',
+            ('django.template.loaders.filesystem.Loader',
+             'django.template.loaders.app_directories.Loader'))]
 
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
