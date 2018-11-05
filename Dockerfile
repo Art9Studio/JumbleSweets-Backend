@@ -69,7 +69,7 @@ WORKDIR /app
 # RUN SECRET_KEY=${SECRET_KEY} \
 #     STATIC_URL=${STATIC_URL} \
 #     python3 manage.py collectstatic --no-input
-RUN cp common.env .env
+ENV DATABASE_URL postgres://saleor:saleor@db/saleor
 RUN SECRET_KEY=dummy \
     STATIC_URL=${STATIC_URL} \
     python3 manage.py collectstatic --no-input
