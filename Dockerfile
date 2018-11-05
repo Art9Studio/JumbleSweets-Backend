@@ -73,12 +73,11 @@ RUN cp common.env .env
 RUN SECRET_KEY=dummy \
     STATIC_URL=${STATIC_URL} \
     python3 manage.py collectstatic --no-input
+RUN rm -R common.env .env .envs
 
 RUN useradd --system saleor && \
     mkdir -p /app/media /app/static && \
     chown -R saleor:saleor /app/
-
-RUN rm -R common.env .env .envs
 
 USER saleor
 
