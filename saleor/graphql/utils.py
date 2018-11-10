@@ -5,6 +5,7 @@ from graphene_django.registry import get_global_registry
 from graphql.error import GraphQLError
 from graphql_relay import from_global_id
 
+from saleor.search.backends import picker
 from .core.types import PermissionDisplay, PermissionEnum, ReportingPeriod
 
 registry = get_global_registry()
@@ -79,6 +80,11 @@ def filter_by_query_param(queryset, query, search_fields):
             query_objects |= Q(**{q: query_by[q]})
         return queryset.filter(query_objects).distinct()
     return queryset
+
+
+def fulltext_search(query):
+    search = picker.pick_backend()
+    return search(query)
 
 
 def reporting_period_to_date(period):

@@ -5,7 +5,7 @@ from django.db.models import Sum, Q, Count
 from ...order import OrderStatus
 from ...product import models
 from ..utils import (
-    filter_by_query_param, filter_by_period, get_database_id, get_nodes)
+    filter_by_query_param, filter_by_period, get_database_id, get_nodes, fulltext_search)
 from .filters import (
     filter_products_by_attributes, filter_products_by_categories,
     filter_products_by_collections, filter_products_by_price, sort_qs)
@@ -66,8 +66,13 @@ def resolve_products(
         query=None, **kwargs):
 
     user = info.context.user
-    qs = models.Product.objects.visible_to_user(user)
-    qs = filter_by_query_param(qs, query, PRODUCT_SEARCH_FIELDS)
+    # qs = models.Product.objects.visible_to_user(user)
+    # qs = filter_by_query_param(qs, query, PRODUCT_SEARCH_FIELDS)
+    if query:
+        qs = fulltext_search(query)
+    else:
+        qs = models.Product.objects.visible_to_user(user)
+    qs = qs.visible_to_user(user)
 
     if attributes:
         qs = filter_products_by_attributes(qs, attributes)

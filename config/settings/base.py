@@ -391,7 +391,7 @@ LOGOUT_ON_PASSWORD_CHANGE = False
 # SEARCH CONFIGURATION
 DB_SEARCH_ENABLED = True
 
-ENABLE_SEARCH =  DB_SEARCH_ENABLED  # global search disabling
+ENABLE_SEARCH = DB_SEARCH_ENABLED  # global search disabling
 
 SEARCH_BACKEND = 'saleor.search.backends.postgresql'
 
